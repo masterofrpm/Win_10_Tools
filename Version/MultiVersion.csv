@@ -1,0 +1,9 @@
+Script,ReleaseType,Version,MinorVersion
+BCC_XAML_Win10-InitialSetup,Stable,3.8,0
+BCC_XAML_Win10-InitialSetup,Test,3.8,0
+StrippedGui,Stable,3.8,0
+StrippedGui,Test,3.8,0
+XAML_Win10-InitialSetup,Stable,3.8,0
+XAML_Win10-InitialSetup,Test,3.8,0
+ScriptStarter,Stable,3.8,0
+ScriptStarter,Test,3.8,0
