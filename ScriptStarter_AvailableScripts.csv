@@ -1,0 +1,3 @@
+ScriptName,extension,ShowOnScriptStarter,LaunchType,RunFromInternet
+NetworkShareFunction,ps1,1,Text,1
+Win10_GUI_Menu,ps1,1,execute,1

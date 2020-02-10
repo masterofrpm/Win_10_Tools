@@ -2,8 +2,13 @@
 .NAME
     ScriptStarter
 .SYNOPSIS
-    Lists available scripts in current directory with ability to lunch them
+    Lists available scripts at https://github.com/masterofrpm/Win_10_Tools/
 #>
+
+$MySite = 'https://GitHub.com/masterofrpm/Win_10_Tools'
+$URL_Base = $MySite.Replace('GitHub','raw.GitHub')+'/master/'
+$Version_Url = $URL_Base + 'Version/Win10_GUI_Menu.csv'
+$List_Url = $URL_Base + 'ScriptStarter_AvailableScripts.csv'
 
 # Relaunch the script with administrator privileges
 Function RequireAdmin {
@@ -29,6 +34,7 @@ $ScriptList.width                = 342
 $ScriptList.height               = 403
 $ScriptList.Anchor               = 'top,right,bottom,left'
 $ScriptList.location             = New-Object System.Drawing.Point(44,146)
+$ScriptList.Font                 = 'Microsoft Sans Serif,14'
 
 $Label1                          = New-Object system.Windows.Forms.Label
 $Label1.text                     = "Script Starter Modded by Paul Meyers"
@@ -36,7 +42,7 @@ $Label1.AutoSize                 = $true
 $Label1.width                    = 25
 $Label1.height                   = 10
 $Label1.location                 = New-Object System.Drawing.Point(18,15)
-$Label1.Font                     = 'Microsoft Sans Serif,20,style=Bold'
+$Label1.Font                     = 'Microsoft Sans Serif,14,style=Bold'
 $Label1.ForeColor                = "#ffffff"
 
 $Panel1                          = New-Object system.Windows.Forms.Panel
@@ -51,7 +57,7 @@ $Label2.AutoSize                 = $true
 $Label2.width                    = 25
 $Label2.height                   = 10
 $Label2.location                 = New-Object System.Drawing.Point(44,98)
-$Label2.Font                     = 'Microsoft Sans Serif,10'
+$Label2.Font                     = 'Microsoft Sans Serif,14,style=Bold'
 
 $Launch                           = New-Object system.Windows.Forms.Button
 $Launch.BackColor                 = "#b8e986"
@@ -60,7 +66,7 @@ $Launch.width                     = 344
 $Launch.height                    = 30
 $Launch.Anchor                    = 'right,bottom,left'
 $Launch.location                  = New-Object System.Drawing.Point(44,572)
-$Launch.Font                      = 'Microsoft Sans Serif,10'
+$Launch.Font                      = 'Microsoft Sans Serif,14'
 
 $Form.controls.AddRange(@($ScriptList,$Panel1,$Label2,$Launch))
 $Panel1.controls.AddRange(@($Label1))
@@ -72,7 +78,7 @@ $Launch.Add_Click({ LaunchScript })
 
 
 function Initialize { 
-    
+    UpdateCheck
     #Path of current folder, filtering all ps1 scripts
     $path = $PSScriptRoot + "\*.ps1"
     
@@ -102,5 +108,52 @@ function LaunchScript {
     Invoke-Expression -Command $path
 }
 
+Function UpdateCheck {
+	#Write-Host "Checking for updates..."
+	If(InternetCheck) {
+		#Write-Host "Comparing Versions..."
+		$CSV_Ver = Invoke-WebRequest $List_Url | ConvertFrom-Csv
+		Write-Host $CSV_Ver
+		Pause
+		$CSVLine,$RT = If($Release_Type -eq 'Stable'){ 0,'' } Else{ 1,'Testing/' }
+		$WebScriptVer = $CSV_Ver[$CSVLine].Version + "." + $CSV_Ver[$CSVLine].MinorVersion
+		#Write-Host $CSV_Ver $CSVLine $RT $Release_Type $WebScriptVer $Script_Version
+		If($WebScriptVer -gt $Script_Version){ ScriptUpdateFun $RT } Else { Write-Host "Running newest version" }
+	} Else {
+		
+	}
+	PAUSE
+}
+
+Function ScriptUpdateFun([String]$RT) {
+	$Script_Url = $URL_Base + $RT + $($MyInvocation.MyCommand.Name)
+	$ScrpFilePath = $FileBase + $($MyInvocation.MyCommand.Name)
+	$FullVer = "$WebScriptVer.$WebScriptMinorVer"
+	$UpArg = ''
+
+	If($Accept_ToS -ne 1){ $UpArg += '-atos ' }
+	If($InternetCheck -eq 1){ $UpArg += '-sic ' }
+	If($CreateRestorePoint -eq 1){ $UpArg += '-crp ' }
+	If($Restart -eq 0){ $UpArg += '-dnr' }
+	$UpArg += If($RunScr){ "-run $TempSetting " } Else{ "-load $TempSetting " }
+
+	Clear-Host
+	MenuLine -L
+	MenuBlankLine -L
+	DisplayOutLML (''.PadRight(18)+'Update Found!') -C 13 -L
+	MenuBlankLine -L
+	DisplayOut '|',' Updating from version ',"$Script_Version".PadRight(30),'|' -C 14,15,11,14 -L
+	MenuBlankLine -L
+	DisplayOut '|',' Downloading version ',"$FullVer".PadRight(31),'|' -C 14,15,11,14 -L
+	DisplayOutLML 'Will run after download is complete.' -C 15 -L
+	MenuBlankLine -L
+	MenuLine -L
+	PAUSE
+	(New-Object System.Net.WebClient).DownloadFile($Script_Url, $ScrpFilePath)
+	Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$ScrpFilePath`" $UpArg" -Verb RunAs
+	Exit
+}
+
+Function InternetCheck{ If($InternetCheck -eq 1 -or (Test-Connection www.GitHub.com -Count 1 -Quiet)){ Return $True } Return $False }
 
 [void]$Form.ShowDialog()

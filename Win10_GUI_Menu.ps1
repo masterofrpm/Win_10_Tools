@@ -128,7 +128,7 @@ If(!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::
 
 $MySite = 'https://GitHub.com/masterofrpm/Win_10_Tools'
 $URL_Base = $MySite.Replace('GitHub','raw.GitHub')+'/master/'
-$Version_Url = $URL_Base + 'Version/MultiVersion.csv'
+$Version_Url = $URL_Base + 'Version/Win10_GUI_Menu.csv'
 
 $Script:Win10Ver = (Get-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion' -Name ReleaseID).ReleaseId
 $Script:OSBit = If([System.Environment]::Is64BitProcess){ 64 } Else{ 32 }
