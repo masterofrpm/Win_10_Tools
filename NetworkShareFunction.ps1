@@ -33,7 +33,7 @@
     }
 }
 # Be reminded that it is insecure to store passwords inside of scripts
-# Examples
+# Usage Examples
 #MapNetworkDrive -D "G:" -P "\\ServerName\ShareFolder"
 #MapNetworkDrive -D "G:" -P "\\ServerName\ShareFolder" -L "Label with Spaces"
 #MapNetworkDrive -D "G:" -P "\\ServerName\ShareFolder" -L "Label with Spaces" -U "Username"
