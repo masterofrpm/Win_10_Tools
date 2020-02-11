@@ -1,5 +1,5 @@
-Write-Host $($MyInvocation.MyCommand.Name)
-Pause
+#Write-Host $($MyInvocation.MyCommand.Name)
+#Pause
 ##########
 # Win 10 Setup Script/Tweaks with Menu(GUI)
 #
