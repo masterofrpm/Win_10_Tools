@@ -94,15 +94,19 @@ function get-selectedScript {
 	$ScriptToInit = $CSV_Selected.NameWithExtension
     $Script_Url = $URL_Base + $ScriptToInit
 	$Script_Path = $Path_Base + $ScriptToInit
-    return $Script_Url, $Script_Path
+    return $Script_Url, $Script_Path, $CSV_Selected.LaunchType
 }
 
 function LaunchScript {
-    $Script_Url, $Script_Path = get-selectedScript
+    $Script_Url, $Script_Path, $Launch_Type = get-selectedScript
 	Write-Host $Script_Url, $Script_Path
 	#Execute selected script
 	(New-Object System.Net.WebClient).DownloadFile($Script_Url, $Script_Path)
-	Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$Script_Path`" $UpArg" -Verb RunAs
+	If($Launch_Type -eq "execute"){
+		Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$Script_Path`" $UpArg" -Verb RunAs
+	} ElseIf ($Launch_Type -eq "text"){
+		Start-Process notepad.exe `"$Script_Path`"
+	}
 }
 
 Function InternetCheck{ If($InternetCheck -eq 1 -or (Test-Connection www.GitHub.com -Count 1 -Quiet)){ Return $True } Return $False }
