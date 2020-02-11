@@ -74,7 +74,6 @@ $Panel1.controls.AddRange(@($Label1))
 
 $Form.Add_Load({ Initialize })
 $Launch.Add_Click({ LaunchScript })
-#$ScriptList.Add_SelectedIndexChanged({ Selected-Script })
 
 function Initialize {
     #Assign the list of scripts as the data source of listbox
@@ -104,9 +103,6 @@ function LaunchScript {
 	#Execute selected script
 	(New-Object System.Net.WebClient).DownloadFile($Script_Url, $Script_Path)
 	Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$Script_Path`" $UpArg" -Verb RunAs
-    #Invoke-Expression -Command $Script_Url
-	Pause
-	#Exit
 }
 
 Function InternetCheck{ If($InternetCheck -eq 1 -or (Test-Connection www.GitHub.com -Count 1 -Quiet)){ Return $True } Return $False }
