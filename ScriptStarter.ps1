@@ -7,6 +7,7 @@
 
 $MySite = 'https://GitHub.com/masterofrpm/Win_10_Tools'
 $URL_Base = $MySite.Replace('GitHub','raw.GitHub')+'/master/'
+$Path_Base = $PSScriptRoot + '\'
 $Version_Url = $URL_Base + 'Version/Win10_GUI_Menu.csv'
 $List_Url = $URL_Base + 'ScriptStarter_AvailableScripts.csv'
 
@@ -34,7 +35,7 @@ $ScriptList.width                = 342
 $ScriptList.height               = 403
 $ScriptList.Anchor               = 'top,right,bottom,left'
 $ScriptList.location             = New-Object System.Drawing.Point(44,146)
-$ScriptList.Font                 = 'Microsoft Sans Serif,14'
+$ScriptList.Font                 = 'Microsoft Sans Serif,12'
 
 $Label1                          = New-Object system.Windows.Forms.Label
 $Label1.text                     = "Script Starter Modded by Paul Meyers"
@@ -75,85 +76,53 @@ $Form.Add_Load({ Initialize })
 $Launch.Add_Click({ LaunchScript })
 #$ScriptList.Add_SelectedIndexChanged({ Selected-Script })
 
-
-
-function Initialize { 
-    UpdateCheck
-    #Path of current folder, filtering all ps1 scripts
-    $path = $PSScriptRoot + "\*.ps1"
-    
-    #Get list of names of all ps1 scripts into a variable
-    $scripts = Get-ChildItem $path  | select -exp Name
-    
+function Initialize {
     #Assign the list of scripts as the data source of listbox
     $ScriptList.DataSource = $scripts 
-
-}
-
+	}
 function get-selectedScript {
-        #Get The name of selected script
-    $scriptName = $ScriptList.SelectedItem.ToString()
-    
-    #path of selected script
-    $path = $PSScriptRoot + "\" + $scriptName
-    
-    return $path
+    #Get The name of selected script
+    $SelectedScript = $ScriptList.SelectedItem.ToString()
+	Write-Host $SelectedScript
+    #Get list of names of all ps1 scripts into a variable
+	If(InternetCheck) {
+		$CSV_Selected = Invoke-WebRequest $List_Url | ConvertFrom-Csv | where-object {$_.ScriptStarterLabel -eq $SelectedScript};
+		} Else {
+			Write-Host "Lost internet connectivity"
+			Pause
+			Exit
+		}
+	$ScriptToInit = $CSV_Selected.NameWithExtension
+    $Script_Url = $URL_Base + $ScriptToInit
+	$Script_Path = $Path_Base + $ScriptToInit
+    return $Script_Url, $Script_Path
 }
 
 function LaunchScript {
-    
-    $path = get-selectedScript
-  
-    #Execute selected script
-    Invoke-Expression -Command $path
-}
-
-Function UpdateCheck {
-	#Write-Host "Checking for updates..."
-	If(InternetCheck) {
-		#Write-Host "Comparing Versions..."
-		$CSV_Ver = Invoke-WebRequest $List_Url | ConvertFrom-Csv
-		Write-Host $CSV_Ver
-		Pause
-		$CSVLine,$RT = If($Release_Type -eq 'Stable'){ 0,'' } Else{ 1,'Testing/' }
-		$WebScriptVer = $CSV_Ver[$CSVLine].Version + "." + $CSV_Ver[$CSVLine].MinorVersion
-		#Write-Host $CSV_Ver $CSVLine $RT $Release_Type $WebScriptVer $Script_Version
-		If($WebScriptVer -gt $Script_Version){ ScriptUpdateFun $RT } Else { Write-Host "Running newest version" }
-	} Else {
-		
-	}
-	PAUSE
-}
-
-Function ScriptUpdateFun([String]$RT) {
-	$Script_Url = $URL_Base + $RT + $($MyInvocation.MyCommand.Name)
-	$ScrpFilePath = $FileBase + $($MyInvocation.MyCommand.Name)
-	$FullVer = "$WebScriptVer.$WebScriptMinorVer"
-	$UpArg = ''
-
-	If($Accept_ToS -ne 1){ $UpArg += '-atos ' }
-	If($InternetCheck -eq 1){ $UpArg += '-sic ' }
-	If($CreateRestorePoint -eq 1){ $UpArg += '-crp ' }
-	If($Restart -eq 0){ $UpArg += '-dnr' }
-	$UpArg += If($RunScr){ "-run $TempSetting " } Else{ "-load $TempSetting " }
-
-	Clear-Host
-	MenuLine -L
-	MenuBlankLine -L
-	DisplayOutLML (''.PadRight(18)+'Update Found!') -C 13 -L
-	MenuBlankLine -L
-	DisplayOut '|',' Updating from version ',"$Script_Version".PadRight(30),'|' -C 14,15,11,14 -L
-	MenuBlankLine -L
-	DisplayOut '|',' Downloading version ',"$FullVer".PadRight(31),'|' -C 14,15,11,14 -L
-	DisplayOutLML 'Will run after download is complete.' -C 15 -L
-	MenuBlankLine -L
-	MenuLine -L
-	PAUSE
-	(New-Object System.Net.WebClient).DownloadFile($Script_Url, $ScrpFilePath)
-	Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$ScrpFilePath`" $UpArg" -Verb RunAs
-	Exit
+    $Script_Url, $Script_Path = get-selectedScript
+	Write-Host $Script_Url, $Script_Path
+	#Execute selected script
+	(New-Object System.Net.WebClient).DownloadFile($Script_Url, $Script_Path)
+	Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$Script_Path`" $UpArg" -Verb RunAs
+    #Invoke-Expression -Command $Script_Url
+	Pause
+	#Exit
 }
 
 Function InternetCheck{ If($InternetCheck -eq 1 -or (Test-Connection www.GitHub.com -Count 1 -Quiet)){ Return $True } Return $False }
+#Get list of names of all ps1 scripts into a variable
+If(InternetCheck) { 
+	Write-Host $List_Url; 
+	$CSV_Ver = Invoke-WebRequest $List_Url | ConvertFrom-Csv; 
+	$scripts = @(
+		$CSV_Ver.ScriptStarterLabel
+		) 
+	} Else { 
+		$scripts = @(
+			'Internet Test Failed!',
+			'Please check your internet connection.',
+			'Be sure you can access github.com'
+		) 
+	}
 
 [void]$Form.ShowDialog()
