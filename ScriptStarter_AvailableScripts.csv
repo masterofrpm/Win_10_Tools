@@ -1,3 +1,4 @@
 ScriptName,extension,ScriptStarterLabel,NameWithExtension,LaunchType
-NetworkShareFunction,ps1,NetworkShareFunction.ps1 (Show Source),NetworkShareFunction.ps1,Text
+NetworkShareFunction,ps1,NetworkShareFunction.ps1 (Show Source),NetworkShareFunction.ps1,text
+ToggleAudioPlaybackDevice,ps1,ToggleAudioPlaybackDevice.ps1 (Show Source),ToggleAudioPlaybackDevice.ps1,text
 Win10_GUI_Menu,ps1,Win10_GUI_Menu.ps1 (Launch),Win10_GUI_Menu.ps1,execute
