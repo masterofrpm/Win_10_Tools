@@ -258,15 +258,9 @@ Function UpdateCheck {
 		DisplayOutLML 'is currently down.' -C 2
 		DisplayOutLML 'Tested by pinging GitHub.com' -C 2
 		MenuBlankLine
-		DisplayOutLML 'To skip use one of the following methods' -C 2
-		DisplayOut '|',' 1. Change ','InternetCheck',' in bat file'.PadRight(28),'|' -C 14,2,15,2,14
-		DisplayOut '|',' 2. Change ','InternetCheck',' in bat file'.PadRight(28),'|' -C 14,2,15,2,14
-		DisplayOut '|',' 3. Run Script or Bat file with ','-sic',' switch         ','|' -C 14,2,15,2,14
-		MenuBlankLine
 		MenuLine
 		AnyKeyClose
 	}
-	PAUSE
 }
 
 Function ScriptUpdateFun([String]$RT) {
@@ -575,7 +569,7 @@ Function GuiStart {
 
 [xml]$XAML = @"
 <Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Name="Win10_Script"
-Title="Windows 10 Settings/Tweaks Script By: Madbomb122 (v.$Script_Version -$Script_Date" Height="420" Width="620" BorderBrush="Black" Background="White">
+Title="Windows 10 Settings/Tweaks Script By: Masterofrpm (v.$Script_Version -$Script_Date" Height="520" Width="720" BorderBrush="Black" Background="#FF0086BE">
 	<Window.Resources>
 		<Style x:Key="SeparatorStyle1" TargetType="{x:Type Separator}">
 			<Setter Property="SnapsToDevicePixels" Value="True"/>
@@ -583,12 +577,12 @@ Title="Windows 10 Settings/Tweaks Script By: Madbomb122 (v.$Script_Version -$Scr
 			<Setter Property="Template">
 				<Setter.Value>
 					<ControlTemplate TargetType="{x:Type Separator}">
-						<Border Height="24" SnapsToDevicePixels="True" Background="#FF4D4D4D" BorderBrush="#FF4D4D4D" BorderThickness="0,0,0,1"/>
+						<Border Height="24" SnapsToDevicePixels="True" Background="#FF4DA046" BorderBrush="#FF4D4D4D" BorderThickness="0,0,0,1"/>
 					</ControlTemplate>
 				</Setter.Value>
 			</Setter>
 		</Style>
-		<Style TargetType="{x:Type ToolTip}"><Setter Property="Background" Value="#FFFFFFBF"/></Style>
+		<Style TargetType="{x:Type ToolTip}"><Setter Property="Background" Value="#FF4DA046"/></Style>
 	</Window.Resources>
 	<Window.Effect><DropShadowEffect/></Window.Effect>
 	<Grid>
@@ -599,16 +593,11 @@ Title="Windows 10 Settings/Tweaks Script By: Madbomb122 (v.$Script_Version -$Scr
 		</Grid.RowDefinitions>
 		<Menu Grid.Row="0" VerticalAlignment="Top">
 			<MenuItem Header="Help">
-				<MenuItem Name="FeedbackButton" Header="Feedback/Bug Report"/>
-				<MenuItem Name="FAQButton" Header="FAQ"/>
-				<MenuItem Name="AboutButton" Header="About"/>
 				<MenuItem Name="CopyrightButton" Header="Copyright"/>
 				<MenuItem Name="ContactButton" Header="Contact Me"/>
 			</MenuItem>
-			<MenuItem Name="DonateButton" Header="Donate to Me" Background="#FFFFAD2F" FontWeight="Bold"/>
-			<MenuItem Name="Madbomb122WSButton" Header="Madbomb122's GitHub" Background="#FFFFDF4F" FontWeight="Bold"/>
 		</Menu>
-		<TabControl Name="TabControl" Grid.Row="1" BorderBrush="Gainsboro" TabStripPlacement="Left">
+		<TabControl Name="TabControl" Grid.Row="1" BorderBrush="Gainsboro" TabStripPlacement="Left" Background="#FF4DA046">
 			<TabControl.Resources>
 				<Style TargetType="TabItem">
 					<Setter Property="Template">
@@ -618,8 +607,8 @@ Title="Windows 10 Settings/Tweaks Script By: Madbomb122 (v.$Script_Version -$Scr
 									<ContentPresenter x:Name="ContentSite"  VerticalAlignment="Center" HorizontalAlignment="Center" ContentSource="Header" Margin="5,2"/>
 								</Border>
 								<ControlTemplate.Triggers>
-									<Trigger Property="IsSelected" Value="True"><Setter TargetName="Border" Property="Background" Value="LightSkyBlue" /></Trigger>
-									<Trigger Property="IsSelected" Value="False"><Setter TargetName="Border" Property="Background" Value="GhostWhite" /></Trigger>
+									<Trigger Property="IsSelected" Value="True"><Setter TargetName="Border" Property="Background" Value="#FF52CAF5" /></Trigger>
+									<Trigger Property="IsSelected" Value="False"><Setter TargetName="Border" Property="Background" Value="#FFBAD532" /></Trigger>
 								</ControlTemplate.Triggers>
 							</ControlTemplate>
 						</Setter.Value>
@@ -627,13 +616,13 @@ Title="Windows 10 Settings/Tweaks Script By: Madbomb122 (v.$Script_Version -$Scr
 				</Style>
 			</TabControl.Resources>
 			<TabItem Name="Options_Tab" Header="Script Options">
-				<Grid Background="#FFE5E5E5">
+				<Grid Background="#FF006C9D">
 					<Grid.RowDefinitions>
 						<RowDefinition Height="6*"/>
 						<RowDefinition Height="2*"/>
 						<RowDefinition Height="1.5*"/>
 					</Grid.RowDefinitions>
-					<GroupBox Header="Options" Grid.Row="0" Margin="2">
+					<GroupBox Header="Options" Grid.Row="0" Margin="2" Background="#BB00B4E3">
 						<Grid>
 							<Grid.RowDefinitions>
 								<RowDefinition Height="*"/>
@@ -654,7 +643,7 @@ Title="Windows 10 Settings/Tweaks Script By: Madbomb122 (v.$Script_Version -$Scr
 							<CheckBox Grid.Row="4" Grid.Column="0" Name="InternetCheck_CB" Content="Skip Internet Check" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
 						</Grid>
 					</GroupBox>
-					<GroupBox Grid.Row="1" Header="Backup / Restore / Reset" Margin="2">
+					<GroupBox Grid.Row="1" Header="Backup / Restore / Reset" Margin="2" Background="#BB00B4E3">
 						<Grid>
 							<Grid.RowDefinitions>
 								<RowDefinition Height="*"/>
@@ -673,7 +662,7 @@ Title="Windows 10 Settings/Tweaks Script By: Madbomb122 (v.$Script_Version -$Scr
 							<TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" HorizontalAlignment="Left" FontStyle="Italic" TextWrapping="Wrap" Text="Windows Default * / Does not modify Windows Apps or OneDrive Installation"/>
 						</Grid>
 					</GroupBox>
-					<GroupBox Grid.Row="2" Header="Version" Margin="2">
+					<GroupBox Grid.Row="2" Header="Version" Margin="2" Background="#BB00B4E3">
 						<Grid>
 							<TextBlock Name="Script_Ver_Txt" HorizontalAlignment="Left" TextWrapping="Wrap" Text="v.$Script_Version ($Script_Date) -$Release_Type" VerticalAlignment="Top"/>
 						</Grid>
@@ -681,7 +670,7 @@ Title="Windows 10 Settings/Tweaks Script By: Madbomb122 (v.$Script_Version -$Scr
 				</Grid>
 			</TabItem>
 			<TabItem Name="Privacy_tab" Header="Privacy">
-				<Grid Background="#FFE5E5E5">
+				<Grid Background="#BB00B4E3">
 					<Grid.ColumnDefinitions>
 						<ColumnDefinition Width="*"/>
 						<ColumnDefinition Width="*"/>
@@ -744,7 +733,7 @@ Title="Windows 10 Settings/Tweaks Script By: Madbomb122 (v.$Script_Version -$Scr
 				</Grid>
 			</TabItem>
 			<TabItem Name="SrvTweak_Tab" Header="Service Tweaks">
-				<Grid Background="#FFE5E5E5">
+				<Grid Background="#FF006C9D">
 					<Grid.ColumnDefinitions>
 						<ColumnDefinition Width="*"/>
 						<ColumnDefinition Width="*"/>
@@ -792,12 +781,12 @@ Title="Windows 10 Settings/Tweaks Script By: Madbomb122 (v.$Script_Version -$Scr
 				</Grid>
 			</TabItem>
 			<TabItem Name="Context_Tab" Header="Context Menu, &#xD;&#xA;Start Menu">
-				<Grid Background="#FFE5E5E5">
+				<Grid Background="#FF006C9D">
 					<Grid.ColumnDefinitions>
 						<ColumnDefinition Width="*"/>
 						<ColumnDefinition Width="*"/>
 					</Grid.ColumnDefinitions>
-					<GroupBox Grid.Column="0" Header="Context Menu" Margin="5">
+					<GroupBox Grid.Column="0" Header="Context Menu" Margin="5" Background="#BB00B4E3">
 						<Grid>
 							<Grid.RowDefinitions>
 								<RowDefinition Height="*"/>
@@ -828,7 +817,7 @@ Title="Windows 10 Settings/Tweaks Script By: Madbomb122 (v.$Script_Version -$Scr
 							<ComboBox Name="SendTo_Combo" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 						</Grid>
 					</GroupBox>
-					<GroupBox Grid.Column="1" Header="Start Menu" Margin="5">
+					<GroupBox Grid.Column="1" Header="Start Menu" Margin="5" Background="#BB00B4E3">
 						<Grid>
 							<Grid.RowDefinitions>
 								<RowDefinition Height="*"/>
@@ -856,7 +845,7 @@ Title="Windows 10 Settings/Tweaks Script By: Madbomb122 (v.$Script_Version -$Scr
 				</Grid>
 			</TabItem>
 			<TabItem Name="TaskBar_Tab" Header="Task Bar">
-				<Grid Background="#FFE5E5E5">
+				<Grid Background="#FF006C9D">
 					<Grid.ColumnDefinitions>
 						<ColumnDefinition Width="2*"/>
 						<ColumnDefinition Width="*"/>
@@ -899,7 +888,7 @@ Title="Windows 10 Settings/Tweaks Script By: Madbomb122 (v.$Script_Version -$Scr
 				</Grid>
 			</TabItem>
 			<TabItem Name="Explorer_Tab" Header="Explorer">
-				<Grid Background="#FFE5E5E5">
+				<Grid Background="#FF006C9D">
 					<Grid.ColumnDefinitions>
 						<ColumnDefinition Width="4*"/>
 						<ColumnDefinition Width="3*"/>
@@ -986,12 +975,12 @@ Title="Windows 10 Settings/Tweaks Script By: Madbomb122 (v.$Script_Version -$Scr
 				</Grid>
 			</TabItem>
 			<TabItem Name="Desktop_Tab" Header="Desktop, This PC">
-				<Grid Background="#FFE5E5E5">
+				<Grid Background="#FF006C9D">
 					<Grid.ColumnDefinitions>
 						<ColumnDefinition Width="*"/>
 						<ColumnDefinition Width="*"/>
 					</Grid.ColumnDefinitions>
-					<GroupBox Grid.Column="0" Header="Desktop" Margin="5">
+					<GroupBox Grid.Column="0" Header="Desktop" Margin="5" Background="#BB00B4E3">
 						<Grid>
 							<Grid.RowDefinitions>
 								<RowDefinition Height="*"/>
@@ -1016,7 +1005,7 @@ Title="Windows 10 Settings/Tweaks Script By: Madbomb122 (v.$Script_Version -$Scr
 							<ComboBox Name="ControlPanelOnDesktop_Combo" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 						</Grid>
 					</GroupBox>
-					<GroupBox Grid.Column="1" Header="This PC" Margin="5">
+					<GroupBox Grid.Column="1" Header="This PC" Margin="5" Background="#BB00B4E3">
 						<Grid>
 							<Grid.RowDefinitions>
 								<RowDefinition Height="*"/>
@@ -1052,7 +1041,7 @@ Title="Windows 10 Settings/Tweaks Script By: Madbomb122 (v.$Script_Version -$Scr
 				</Grid>
 			</TabItem>
 			<TabItem Name="Misc_Tab" Header="Photo Viewer, &#xD;&#xA;LockScreen, Misc">
-				<Grid Background="#FFE5E5E5">
+				<Grid Background="#FF006C9D">
 					<Grid.ColumnDefinitions>
 						<ColumnDefinition Width="2.5*"/>
 						<ColumnDefinition Width="2*"/>
@@ -1063,7 +1052,7 @@ Title="Windows 10 Settings/Tweaks Script By: Madbomb122 (v.$Script_Version -$Scr
 								<RowDefinition Height="3*"/>
 								<RowDefinition Height="4*"/>
 							</Grid.RowDefinitions>
-							<GroupBox Grid.Row="0" Header="Photo Viewer" Margin="10">
+							<GroupBox Grid.Row="0" Header="Photo Viewer" Margin="10" Background="#BB00B4E3">
 								<Grid>
 									<Grid.RowDefinitions>
 										<RowDefinition Height="*"/>
@@ -1079,7 +1068,7 @@ Title="Windows 10 Settings/Tweaks Script By: Madbomb122 (v.$Script_Version -$Scr
 									<ComboBox Name="PVOpenWithMenu_Combo" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 								</Grid>
 							</GroupBox>
-							<GroupBox Grid.Row="1" Header="Lockscreen" Margin="5">
+							<GroupBox Grid.Row="1" Header="Lockscreen" Margin="5" Background="#BB00B4E3">
 								<Grid>
 									<Grid.RowDefinitions>
 										<RowDefinition Height="*"/>
@@ -1103,7 +1092,7 @@ Title="Windows 10 Settings/Tweaks Script By: Madbomb122 (v.$Script_Version -$Scr
 							</GroupBox>
 						</Grid>
 					</Grid>
-					<GroupBox Grid.Column="1" Header="Misc" Margin="5">
+					<GroupBox Grid.Column="1" Header="Misc" Margin="5" Background="#BB00B4E3">
 						<Grid>
 							<Grid.RowDefinitions>
 								<RowDefinition Height="*"/>
@@ -1160,12 +1149,12 @@ Title="Windows 10 Settings/Tweaks Script By: Madbomb122 (v.$Script_Version -$Scr
 				</DataGrid>
 			</TabItem>
 			<TabItem Name="Application_Tab" Header="Application, &#xD;&#xA;Windows Update">
-				<Grid Background="#FFE5E5E5">
+				<Grid Background="#FF006C9D">
 					<Grid.ColumnDefinitions>
 						<ColumnDefinition Width="*"/>
 						<ColumnDefinition Width="*"/>
 					</Grid.ColumnDefinitions>
-					<GroupBox Grid.Column="0" Header="Application/Feature" Margin="5">
+					<GroupBox Grid.Column="0" Header="Application/Feature" Margin="5" Background="#BB00B4E3">
 						<Grid>
 							<Grid.RowDefinitions>
 								<RowDefinition Height="*"/>
@@ -1196,7 +1185,7 @@ Title="Windows 10 Settings/Tweaks Script By: Madbomb122 (v.$Script_Version -$Scr
 							<ComboBox Name="LinuxSubsystem_Combo" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 						</Grid>
 					</GroupBox>
-					<GroupBox Grid.Column="1" Header="Windows Update" Margin="5">
+					<GroupBox Grid.Column="1" Header="Windows Update" Margin="5" Background="#BB00B4E3">
 						<Grid>
 							<Grid.RowDefinitions>
 								<RowDefinition Height="*"/>
@@ -1228,6 +1217,209 @@ Title="Windows 10 Settings/Tweaks Script By: Madbomb122 (v.$Script_Version -$Scr
 							<ComboBox Name="UpdateAvailablePopup_Combo" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 							<Label Content="Update MS Products:" Grid.Row="7" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
 							<ComboBox Name="UpdateMSProducts_Combo" Grid.Row="7" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+						</Grid>
+					</GroupBox>
+				</Grid>
+			</TabItem>
+			<TabItem Name="More_Tab" Header="More Options">
+				<Grid Background="#FF006C9D">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="6*"/>
+					</Grid.RowDefinitions>
+					<GroupBox Header="System Prep" Grid.Row="0" Margin="2" Background="#BB00B4E3">
+						<Grid>
+							<Grid.RowDefinitions>
+								<RowDefinition Height="*"/>
+								<RowDefinition Height="*"/>
+								<RowDefinition Height="*"/>
+								<RowDefinition Height="*"/>
+							</Grid.RowDefinitions>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="2.1*"/>
+								<ColumnDefinition Width="2.1*"/>
+								<ColumnDefinition Width="2.1*"/>
+							</Grid.ColumnDefinitions>
+							<CheckBox Grid.Row="0" Grid.Column="0" Name="Choco_CB" Content="Install Chocolatey" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="0" Grid.Column="1" Name="ICMP_CB" Content="Allow ICMP" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="0" Grid.Column="2" Name="PSRemoting_CB" Content="Allow PSRemoting" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="1" Grid.Column="0" Name="businesssupport_CB" Content="Map Business Support" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="1" Grid.Column="1" Name="bsu_CB" Content="Map BSU" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="1" Grid.Column="2" Name="beostaff_CB" Content="Map BEO Staff" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="2" Grid.Column="0" Name="beoshared_CB" Content="Map BEO Shared" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="2" Grid.Column="1" Name="nonfsi_CB" Content="Map NONFSI" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="2" Grid.Column="2" Name="provteam_CB" Content="Map Prov Team" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="3" Grid.Column="0" Name="Something10_CB" Content="Something10" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="3" Grid.Column="1" Name="Something11_CB" Content="Something11" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="3" Grid.Column="2" Name="Something12_CB" Content="Something12" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+						</Grid>
+					</GroupBox>
+				</Grid>
+			</TabItem>
+			<TabItem Name="Browsers_Tab" Header="Browsers">
+				<Grid Background="#FF006C9D">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="100"/>
+						<RowDefinition Height="60"/>
+						<RowDefinition Height="80"/>
+						<RowDefinition Height="60"/>
+						<RowDefinition Height="*"/>
+					</Grid.RowDefinitions>
+					<GroupBox Header="Chrome (Requires Chocolatey)" Grid.Row="0" Margin="2" Background="#BB00B4E3">
+						<Grid>
+							<Grid.RowDefinitions>
+								<RowDefinition Height="*"/>
+								<RowDefinition Height="*"/>
+								<RowDefinition Height="*"/>
+							</Grid.RowDefinitions>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="2.1*"/>
+								<ColumnDefinition Width="2.1*"/>
+								<ColumnDefinition Width="2.1*"/>
+							</Grid.ColumnDefinitions>
+							<CheckBox Grid.Row="0" Grid.Column="0" Name="googlechrome_CB" Content="Google Chrome" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="0" Grid.Column="1" Name="ublockoriginchrome_CB" Content="uBlock Origin for Chrome" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="0" Grid.Column="2" Name="ietab_CB" Content="IE Tab for Chrome" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="1" Grid.Column="0" Name="fireshot_CB" Content="Fireshot" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="1" Grid.Column="1" Name="chromerdh_CB" Content="Chrome RD Host" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="1" Grid.Column="2" Name="grammarly_CB" Content="Grammerly for Chrome" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="2" Grid.Column="0" Name="googlevoice_CB" Content="Google Voice for Chrome" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="2" Grid.Column="1" Name="googletranslate_CB" Content="Translate for Chrome" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="2" Grid.Column="2" Name="googlewebdesigner_CB" Content="Web Designer for Chrome" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+						</Grid>
+					</GroupBox>
+					<GroupBox Header="Firefox (Requires Chocolatey)" Grid.Row="1" Margin="2" Background="#BB00B4E3">
+						<Grid>
+							<Grid.RowDefinitions>
+								<RowDefinition Height="*"/>
+							</Grid.RowDefinitions>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="2.1*"/>
+								<ColumnDefinition Width="2.1*"/>
+								<ColumnDefinition Width="2.1*"/>
+							</Grid.ColumnDefinitions>
+							<CheckBox Grid.Row="0" Grid.Column="0" Name="firefox_CB" Content="Mozilla Firefox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="0" Grid.Column="1" Name="ietab2_CB" Content="IE Tab for Firefox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="0" Grid.Column="2" Name="ublockoriginfirefox_CB" Content="uBlock Origin for Firefox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+						</Grid>
+					</GroupBox>
+					<GroupBox Header="Password Managers (Requires Chocolatey)" Grid.Row="2" Margin="2" Background="#BB00B4E3">
+						<Grid>
+							<Grid.RowDefinitions>
+								<RowDefinition Height="*"/>
+								<RowDefinition Height="*"/>
+							</Grid.RowDefinitions>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="2.1*"/>
+								<ColumnDefinition Width="2.1*"/>
+								<ColumnDefinition Width="2.1*"/>
+							</Grid.ColumnDefinitions>
+							<CheckBox Grid.Row="0" Grid.Column="0" Name="keepass_CB" Content="KeePass Classic" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="0" Grid.Column="1" Name="chromelpass_CB" Content="Chromelpass" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="0" Grid.Column="2" Name="keepasshttp_CB" Content="KeePassHTTP" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="1" Grid.Column="0" Name="lastpass_CB" Content="LastPass for Chrome" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="1" Grid.Column="1" Name="roboform_CB" Content="RoboForm" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+						</Grid>
+					</GroupBox>
+					<GroupBox Header="Common Software (Requires Chocolatey)" Grid.Row="3" Margin="2" Background="#BB00B4E3">
+						<Grid>
+							<Grid.RowDefinitions>
+								<RowDefinition Height="*"/>
+							</Grid.RowDefinitions>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="2.1*"/>
+								<ColumnDefinition Width="2.1*"/>
+								<ColumnDefinition Width="2.1*"/>
+								<ColumnDefinition Width="2.1*"/>
+								<ColumnDefinition Width="2.1*"/>
+							</Grid.ColumnDefinitions>
+							<CheckBox Grid.Row="0" Grid.Column="0" Name="Vlc_CB" Content="VLC" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="0" Grid.Column="1" Name="Irfanview_CB" Content="Irfanview" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="0" Grid.Column="2" Name="notepadplusplus_CB" Content="Notepad++" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="0" Grid.Column="3" Name="sevenzip_CB" Content="7zip" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="0" Grid.Column="4" Name="Spotify_CB" Content="Spotify" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+						</Grid>
+					</GroupBox>
+					<GroupBox Header="Common Utilities (Requires Chocolatey)" Grid.Row="4" Margin="2" Background="#BB00B4E3">
+						<Grid>
+							<Grid.RowDefinitions>
+								<RowDefinition Height="*"/>
+								<RowDefinition Height="*"/>
+							</Grid.RowDefinitions>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="2.1*"/>
+								<ColumnDefinition Width="2.1*"/>
+								<ColumnDefinition Width="2.1*"/>
+							</Grid.ColumnDefinitions>
+							<CheckBox Grid.Row="0" Grid.Column="0" Name="vmwarehorizonclient_CB" Content="VMware Horizon Client" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="0" Grid.Column="1" Name="Calibre_CB" Content="Calibre" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="0" Grid.Column="2" IsEnabled="$False" Name="commandcontext_CB" Content="Command Contexts" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="1" Grid.Column="0" IsEnabled="$False" Name="commandenhancements_CB" Content="Various CLI Tools" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="1" Grid.Column="1" IsEnabled="$False" Name="taskbarandmenuenhancements_CB" Content="Taskbar_Menu Tweaks" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+						</Grid>
+					</GroupBox>
+				</Grid>
+			</TabItem>
+			<TabItem Name="Utilities_Tab" Header="Utilities">
+				<Grid Background="#FF006C9D">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="100"/>
+						<RowDefinition Height="*"/>
+					</Grid.RowDefinitions>
+					<GroupBox Header="Midco Source (Requires Chocolatey)" Grid.Row="0" Margin="2" Background="#BB00B4E3">
+						<Grid>
+							<Grid.RowDefinitions>
+								<RowDefinition Height="*"/>
+								<RowDefinition Height="*"/>
+								<RowDefinition Height="*"/>
+							</Grid.RowDefinitions>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="2.1*"/>
+								<ColumnDefinition Width="2.1*"/>
+								<ColumnDefinition Width="2.1*"/>
+							</Grid.ColumnDefinitions>
+							<CheckBox Grid.Row="0" Grid.Column="0" Name="filezilla_CB" Content="filezilla" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="0" Grid.Column="1" Name="icbusinessmanager_CB" Content="icbusinessmanager" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="0" Grid.Column="2" Name="icoms_CB" Content="icoms" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="1" Grid.Column="0" Name="interactiondesktop_CB" Content="interactiondesktop" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="1" Grid.Column="1" Name="nim_CB" Content="nim" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="1" Grid.Column="2" Name="pdfcreator_CB" Content="pdfcreator" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="2" Grid.Column="0" Name="webexmeetingsapp_CB" Content="webexmeetingsapp" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="2" Grid.Column="1" Name="webexprodtools_CB" Content="webexprodtools" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="2" Grid.Column="2" Name="webexteams_CB" Content="webexteams" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+						</Grid>
+					</GroupBox>
+					<GroupBox Header="Utilities (Requires Chocolatey)" Grid.Row="1" Margin="2" Background="#BB00B4E3">
+						<Grid>
+							<Grid.RowDefinitions>
+								<RowDefinition Height="*"/>
+								<RowDefinition Height="*"/>
+								<RowDefinition Height="*"/>
+								<RowDefinition Height="*"/>
+								<RowDefinition Height="*"/>
+								<RowDefinition Height="*"/>
+								<RowDefinition Height="*"/>
+								<RowDefinition Height="*"/>
+								<RowDefinition Height="*"/>
+								<RowDefinition Height="*"/>
+								<RowDefinition Height="*"/>
+								<RowDefinition Height="*"/>
+							</Grid.RowDefinitions>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="2.1*"/>
+								<ColumnDefinition Width="2.1*"/>
+								<ColumnDefinition Width="2.1*"/>
+							</Grid.ColumnDefinitions>
+							
+							<CheckBox Grid.Row="0" Grid.Column="0" Name="iperf3_CB" Content="iperf3" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="0" Grid.Column="1" Name="wireshark_CB" Content="wireshark" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="0" Grid.Column="2" Name="nmap_CB" Content="nmap" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="1" Grid.Column="0" Name="angryip_CB" Content="angryip" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="1" Grid.Column="1" Name="advancedipscanner_CB" Content="advancedipscanner" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="1" Grid.Column="2" Name="netscan_CB" Content="netscan" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="2" Grid.Column="0" Name="git_CB" Content="git" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="2" Grid.Column="1" Name="vscode_CB" Content="vscode" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="2" Grid.Column="2" Name="androidstudio_CB" Content="androidstudio" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+							<CheckBox Grid.Row="3" Grid.Column="0" Name="php_CB" Content="php" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
 						</Grid>
 					</GroupBox>
 				</Grid>
@@ -3367,6 +3559,43 @@ Function RunScript {
 		ThanksDonate
 		Read-Host -Prompt "`nPress any key to Exit"
 	}
+
+	If($DisableThumbnailCache -eq 0) {
+		If($ShowSkipped -eq 1){ DisplayOut 'Skipping Thumbnail Cache...' -C 15 }
+	} ElseIf($DisableThumbnailCache -eq 1) {
+		DisplayOut 'Enabling creation of thumbnail cache files...' -C 14
+		Remove-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "DisableThumbnailCache" -ErrorAction SilentlyContinue
+	} ElseIf($DisableThumbnailCache -eq 2) {
+		DisplayOut 'Disabling creation of thumbnail cache files...' -C 11
+		Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "DisableThumbnailCache" -Type DWord -Value 1
+	}
+
+	If($DisableThumbsDBOnNetwork -eq 0) {
+		If($ShowSkipped -eq 1){ DisplayOut 'Skipping Thumbnail Cache...' -C 15 }
+	} ElseIf($DisableThumbsDBOnNetwork -eq 1) {
+		DisplayOut 'Enabling creation of Thumbs.db on network folders...' -C 14
+		Remove-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "DisableThumbsDBOnNetworkFolders" -ErrorAction SilentlyContinue
+	} ElseIf($DisableThumbsDBOnNetwork -eq 2) {
+		DisplayOut 'Disabling creation of Thumbs.db on network folders...' -C 11
+		Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "DisableThumbsDBOnNetworkFolders" -Type DWord -Value 1
+	}
+}
+	
+Function AllowResponseToPings {
+	New-NetFirewallRule -DisplayName "Allow inbound ICMPv4" -Direction Inbound -Protocol ICMPv4 -IcmpType 8 -RemoteAddress LocalSubnet -Action Allow
+	New-NetFirewallRule -DisplayName "Allow inbound ICMPv6" -Direction Inbound -Protocol ICMPv6 -IcmpType 8 -RemoteAddress LocalSubnet -Action Allow
+}
+	
+Function EnableRemoteAdminSharesWithLocalUser {
+	Set-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System" -Name "LocalAccountTokenFilterPolicy" -Type DWord -Value 1
+	#Key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
+	#Value: LocalAccountTokenFilterPolicy
+	#Data: 1 (to disable, 0 enables filtering)
+	#Type: REG_DWORD (32-bit)
+}
+	
+Function EnablePSRemoting {
+	Enable-PSRemoting -Force -SkipNetworkProfileCheck
 }
 
 ##########
@@ -3390,7 +3619,6 @@ Function SetDefault {
 ## !!            SAFE TO EDIT VALUES             !!
 ## !!                                            !!
 ## !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
 # Edit values (Option) to your preference
 # Change to an Option not listed will Skip the Function/Setting
 
@@ -3457,7 +3685,9 @@ $Script:Firewall = 0                #0-Skip, 1-Enable*, 2-Disable
 $Script:WinDefender = 0             #0-Skip, 1-Enable*, 2-Disable
 $Script:HomeGroups = 0              #0-Skip, 1-Enable*, 2-Disable
 $Script:RemoteAssistance = 0        #0-Skip, 1-Enable*, 2-Disable
-$Script:RemoteDesktop = 0           #0-Skip, 1-Enable, 2-Disable* --(Remote Desktop w/o Network Level Authentication)
+$Script:RemoteDesktop = 0			#0-Skip, 1-Enable, 2-Disable* --(Remote Desktop w/o Network Level Authentication)
+$Script:DisableThumbnailCache = 0	#0-Skip, 1-Enable Thumbnail caching, 2-Disable Thumbnail caching
+$Script:DisableThumbsDBOnNetwork = 0#0-Skip, 1-Enable Thumbnail caching on Network Drives, 2-Disable Thumbnail caching on Network Drives
 
 #Context Menu Items
 # Function = Option                 #Choices (* Indicates Windows Default)
@@ -3613,6 +3843,135 @@ $Script:APP_WindowsStore = 0        # Windows Store
 $Script:APP_XboxApp = 0             # All Xbox apps (There is a few)
 $Script:APP_ZuneMusic = 0           # Groove Music app
 $Script:APP_ZuneVideo = 0           # Groove Video app
+
+#Values only editable here
+#Functions called on run (Uncomment to make the change upon launch of this script)
+	#AllowResponseToPings					# Allow Windows to respond to Pings to allow for network troubleshooting
+	#EnableRemoteAdminSharesWithLocalUser	# Allow a remote user to access administrative shares using a local user account
+	#EnablePSRemoting						# Allow running powershell scripts remotely
+# Programs to recommend installation of
+#CHROME
+$WPF_googlechrome_CB.IsChecked					= $False	#'googlechrome',
+$WPF_ublockoriginchrome_CB.IsChecked			= $False	#'ublockorigin-chrome',
+$WPF_ietab_CB.IsChecked							= $False	#'ietab-chrome',
+$WPF_fireshot_CB.IsChecked						= $False	#'fireshot-chrome',
+$WPF_chromerdh_CB.IsChecked						= $False	#'chrome-remote-desktop-host',
+$WPF_grammarly_CB.IsChecked						= $False	#'grammarly-chrome',
+$WPF_googlevoice_CB.IsChecked					= $False	#'google-voice-chrome',
+$WPF_googletranslate_CB.IsChecked				= $False	#'google-translate-chrome',
+$WPF_googlewebdesigner_CB.IsChecked				= $False	#'google-web-designer',
+#FIREFOX
+$WPF_firefox_CB.IsChecked						= $False	#'firefox',
+$WPF_ietab2_CB.IsChecked						= $False	#'ietab2-firefox',
+$WPF_ublockoriginfirefox_CB.IsChecked			= $False	#'uBlockOrigin-firefox',
+#PASSWORD MANAGEMENT
+$WPF_keepass_CB.IsChecked 						= $True		#'keepass-classic','keepass-keepasshttp','keepass-plugin-favicon',
+$WPF_chromelpass_CB.IsChecked 					= $False	#'chromelpass-chrome',
+$WPF_keepasshttp_CB.IsChecked 					= $False	#'keepass-keepasshttp',
+$WPF_lastpass_CB.IsChecked 						= $False	#'lastpass','lastpass-for-applications','lastpass-chrome',
+$WPF_roboform_CB.IsChecked 						= $False	#'roboform',
+#SYSTEM UTILITIES
+#$WPF_.IsChecked 						= $False	#
+#CLI UTILITIES
+#$WPF_.IsChecked 						= $False	#
+#NETWORK UTILITIES
+#$WPF_.IsChecked 						= $False	#
+
+#$WPF_commandcontext_CB.IsChecked 				= $False #'powershellhere-elevated','commandwindowhere','ecm',  #Easy Context Menu
+#$WPF_commandenhancements_CB.IsChecked 			= $False #'sudo','smartmontools','gawk','elevate.native',
+#$WPF_taskbarandmenuenhancements_CB.IsChecked	= $False #'searchwithmybrowser','choco-shortcuts-winconfig',
+#$WPF_malwarebytes_CB.IsChecked 					= $False #'malwarebytes',
+#$WPF_belarcadvisor_CB.IsChecked					= $False #'belarcadvisor',
+#$WPF_sysinternals_CB.IsChecked					= $False #'sysinternals',
+
+
+If(0 -eq 1){
+#							<CheckBox Grid.Row="7" Grid.Column="0" Name="_CB" Content="" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+#							<CheckBox Grid.Row="7" Grid.Column="1" Name="_CB" Content="" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+#							<CheckBox Grid.Row="7" Grid.Column="2" Name="_CB" Content="" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+# Browsers
+
+# Utilities
+#$WPF_autoruns_CB.IsChecked						= $False #'autoruns',
+#$WPF_windirstat_CB.IsChecked					= $False #'windirstat',
+#$WPF_ffmeg_CB.IsChecked							= $False #'ffmpeg',
+#$WPF_7zip_CB.IsChecked							= $False #'7zip.install',
+#$WPF_bindutilities_CB.IsChecked					= $False #'bind-toolsonly',
+#$WPF_battoexe_CB.IsChecked						= $False #'advanced-bat-to-exe-converter',
+#$WPF_hotchocolatey_CB.IsChecked					= $False #'hot-chocolatey',
+
+# Networking
+#$WPF_iperf3_CB.IsChecked						= $False #'iperf3',
+#$WPF_wireshark_CB.IsChecked						= $False #'wireshark',
+#$WPF_dnsquerysniffer_CB.IsChecked				= $False #'dnsquerysniffer',
+#$WPF_nmap_CB.IsChecked							= $False #'nmap',
+#$WPF_angryip_CB.IsChecked						= $False #'angryip',
+#$WPF_advancedipscanner_CB.IsChecked				= $False #'advanced-ip-scanner',
+#$WPF_netscan_CB.IsChecked						= $False #'netscan.install',
+
+# Development
+#$WPF_git_CB.IsChecked							= $False #'git.install',
+#$WPF_php_CB.IsChecked							= $False #'php',
+#$WPF_vscode_CB.IsChecked						= $False #'vscode.install',
+#$WPF_androidstudio_CB.IsChecked					= $False #'androidstudio',
+#$WPF_notepadplusplus_CB.IsChecked				= $False #'notepadplusplus.install',
+#$WPF_ags_CB.IsChecked							= $False #'ags', #Adventure Game Studio
+
+# Remote Assistance and Social Apps
+#$WPF_teamviewer_CB.IsChecked					= $False #'teamviewer',
+#$WPF_teamviewerqs_CB.IsChecked					= $False #'teamviewer-qs',
+#$WPF_skype_CB.IsChecked							= $False #'skype',
+#$WPF_whatsapp_CB.IsChecked						= $False #'whatsapp',
+#$WPF_discord_CB.IsChecked						= $False #'discord.install',
+#$WPF__CB.IsChecked					= $False #'line',
+$Nothing = @(
+'mumble',
+
+# Document Viewers and Editors
+'openoffice',
+'calibre',
+
+# Media Viewers and Services
+'xnview',
+'kodi',
+'vlc',
+'spotify',
+'irfanview',
+'irfanviewplugins',
+'mediamonkey',
+'plexmediaserver',
+
+# Media Utilities
+'mkvtoolnix',
+'obs-studio.install',
+'makemkv',
+'avidemux',
+'anyvideoconverter',
+'vidcoder',
+'mkvtoolnix.portable',
+'gmkvextractgui',
+'equalizerapo',
+'videostream',
+
+# Servers
+'squid',
+'bitnami-xampp',
+
+# Downloaders
+'deluge',
+'atubecatcher',
+'youtube-dl-gui.install',
+
+# Gaming
+'cheatengine'
+)
+#$WPF__CB.IsChecked				= $False #'unifying',
+#$WPF__CB.IsChecked				= $False #'sweet-home-3d',
+#$WPF__CB.IsChecked				= $False #'unitypackager',
+
+# Virtualization
+'vmware-workstation-player'
+}
 # --------------------------------------------------------------------------
 ## !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ## !!                                            !!
