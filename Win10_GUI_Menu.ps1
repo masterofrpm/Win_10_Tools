@@ -3636,7 +3636,7 @@ $Script:ShowSkipped = 1             #0-Don't Show Skipped, 1-Show Skipped
 
 #Update Related
 $Script:VersionCheck = 1            #0-Don't Check for Update, 1-Check for Update (Will Auto Download and run newer version)
-# Note: If found will Auto download and runs that, File name will be "Win10-Menu.ps1"
+# Note: If found will Auto download and runs that, File name will be "Win10_GUI_Menu.ps1"
 
 $Script:InternetCheck = 0           #0 = Checks if you have Internet by doing a ping to GitHub.com
                                     #1 = Bypass check if your pings are blocked
@@ -3651,43 +3651,43 @@ $Script:WinDefault = 2              #1-Yes*, 2-No
 
 #Privacy Settings
 # Function = Option                 #Choices (* Indicates Windows Default)
-$Script:Telemetry = 0               #0-Skip, 1-Enable*, 2-Disable
+$Script:Telemetry = 2               #0-Skip, 1-Enable*, 2-Disable
 $Script:WiFiSense = 0               #0-Skip, 1-Enable*, 2-Disable
 $Script:SmartScreen = 0             #0-Skip, 1-Enable*, 2-Disable --(phishing and malware filter for some MS Apps/Prog)
 $Script:LocationTracking = 0        #0-Skip, 1-Enable*, 2-Disable
-$Script:Feedback = 0                #0-Skip, 1-Enable*, 2-Disable
-$Script:AdvertisingID = 0           #0-Skip, 1-Enable*, 2-Disable
-$Script:Cortana = 0                 #0-Skip, 1-Enable*, 2-Disable
-$Script:CortanaSearch = 0           #0-Skip, 1-Enable*, 2-Disable --(If you disable Cortana you can still search with this)
-$Script:ErrorReporting = 0          #0-Skip, 1-Enable*, 2-Disable
-$Script:AutoLoggerFile = 0          #0-Skip, 1-Enable*, 2-Disable
-$Script:DiagTrack = 0               #0-Skip, 1-Enable*, 2-Disable
-$Script:WAPPush = 0                 #0-Skip, 1-Enable*, 2-Disable --(type of text message that contains a direct link to a particular Web page)
+$Script:Feedback = 2                #0-Skip, 1-Enable*, 2-Disable
+$Script:AdvertisingID = 2           #0-Skip, 1-Enable*, 2-Disable
+$Script:Cortana = 2                 #0-Skip, 1-Enable*, 2-Disable
+$Script:CortanaSearch = 2           #0-Skip, 1-Enable*, 2-Disable --(If you disable Cortana you can still search with this)
+$Script:ErrorReporting = 2          #0-Skip, 1-Enable*, 2-Disable
+$Script:AutoLoggerFile = 2          #0-Skip, 1-Enable*, 2-Disable
+$Script:DiagTrack = 2               #0-Skip, 1-Enable*, 2-Disable
+$Script:WAPPush = 2                 #0-Skip, 1-Enable*, 2-Disable --(type of text message that contains a direct link to a particular Web page)
 
 #Windows Update
 # Function = Option                 #Choices (* Indicates Windows Default)
 $Script:UpdateMSProducts = 0		#0-Skip, 1-Enable, 2-Disable*
 $Script:CheckForWinUpdate = 0       #0-Skip, 1-Enable*, 2-Disable
-$Script:WinUpdateType = 0           #0-Skip, 1-Notify, 2-Auto DL, 3-Auto DL+Install*, 4-Local admin chose --(May not work with Home version)
+$Script:WinUpdateType = 2           #0-Skip, 1-Notify, 2-Auto DL, 3-Auto DL+Install*, 4-Local admin chose --(May not work with Home version)
 $Script:WinUpdateDownload = 0       #0-Skip, 1-P2P*, 2-Local Only, 3-Disable
-$Script:UpdateMSRT = 0              #0-Skip, 1-Enable*, 2-Disable --(Malware Software Removal Tool)
+$Script:UpdateMSRT = 2              #0-Skip, 1-Enable*, 2-Disable --(Malware Software Removal Tool)
 $Script:UpdateDriver = 0            #0-Skip, 1-Enable*, 2-Disable --(Offering of drivers through Windows Update)
-$Script:RestartOnUpdate = 0         #0-Skip, 1-Enable*, 2-Disable
-$Script:AppAutoDownload = 0         #0-Skip, 1-Enable*, 2-Disable
+$Script:RestartOnUpdate = 2         #0-Skip, 1-Enable*, 2-Disable
+$Script:AppAutoDownload = 2         #0-Skip, 1-Enable*, 2-Disable
 $Script:UpdateAvailablePopup = 0    #0-Skip, 1-Enable*, 2-Disable
 
 #Service Tweaks
 # Function = Option                 #Choices (* Indicates Windows Default)
 $Script:UAC = 0                     #0-Skip, 1-Lower, 2-Normal*, 3-Higher
 $Script:SharingMappedDrives = 0     #0-Skip, 1-Enable, 2-Disable* --(Sharing mapped drives between users)
-$Script:AdminShares = 0             #0-Skip, 1-Enable*, 2-Disable --(Default admin shares for each drive)
+$Script:AdminShares = 1             #0-Skip, 1-Enable*, 2-Disable --(Default admin shares for each drive)
 $Script:Firewall = 0                #0-Skip, 1-Enable*, 2-Disable
 $Script:WinDefender = 0             #0-Skip, 1-Enable*, 2-Disable
 $Script:HomeGroups = 0              #0-Skip, 1-Enable*, 2-Disable
-$Script:RemoteAssistance = 0        #0-Skip, 1-Enable*, 2-Disable
-$Script:RemoteDesktop = 0			#0-Skip, 1-Enable, 2-Disable* --(Remote Desktop w/o Network Level Authentication)
-$Script:DisableThumbnailCache = 0	#0-Skip, 1-Enable Thumbnail caching, 2-Disable Thumbnail caching
-$Script:DisableThumbsDBOnNetwork = 0#0-Skip, 1-Enable Thumbnail caching on Network Drives, 2-Disable Thumbnail caching on Network Drives
+$Script:RemoteAssistance = 1        #0-Skip, 1-Enable*, 2-Disable
+$Script:RemoteDesktop = 1			#0-Skip, 1-Enable, 2-Disable* --(Remote Desktop w/o Network Level Authentication)
+$Script:DisableThumbnailCache = 2	#0-Skip, 1-Enable Thumbnail caching, 2-Disable Thumbnail caching
+$Script:DisableThumbsDBOnNetwork = 2#0-Skip, 1-Enable Thumbnail caching on Network Drives, 2-Disable Thumbnail caching on Network Drives
 
 #Context Menu Items
 # Function = Option                 #Choices (* Indicates Windows Default)
@@ -3716,22 +3716,22 @@ $Script:TaskBarButtOnDisplay = 0    #0-Skip, 1-All, 2-where window is open, 3-Ma
 
 #Star Menu Items
 # Function = Option                 #Choices (* Indicates Windows Default)
-$Script:StartMenuWebSearch = 0      #0-Skip, 1-Enable*, 2-Disable
-$Script:StartSuggestions = 0        #0-Skip, 1-Enable*, 2-Disable --(The Suggested Apps in Start Menu)
+$Script:StartMenuWebSearch = 2      #0-Skip, 1-Enable*, 2-Disable
+$Script:StartSuggestions = 2        #0-Skip, 1-Enable*, 2-Disable --(The Suggested Apps in Start Menu)
 $Script:MostUsedAppStartMenu = 0    #0-Skip, 1-Show*, 2-Hide
 $Script:RecentItemsFrequent = 0     #0-Skip, 1-Enable*, 2-Disable --(In Start Menu)
 $Script:UnpinItems = 0              #0-Skip, 1-Unpin
 
 #Explorer Items
 # Function = Option                 #Choices (* Indicates Windows Default)
-$Script:AccessKeyPrmpt = 0          #0-Skip, 1-Enable*, 2-Disable
+$Script:AccessKeyPrmpt = 2          #0-Skip, 1-Enable*, 2-Disable
 $Script:F1HelpKey = 0               #0-Skip, 1-Enable*, 2-Disable
 $Script:Autoplay = 0                #0-Skip, 1-Enable*, 2-Disable
 $Script:Autorun = 0                 #0-Skip, 1-Enable*, 2-Disable
 $Script:PidInTitleBar = 0           #0-Skip, 1-Show, 2-Hide* --(PID = Processor ID)
 $Script:AeroSnap = 0                #0-Skip, 1-Enable*, 2-Disable --(Allows you to quickly resize the window you’re currently using)
-$Script:AeroShake = 0               #0-Skip, 1-Enable*, 2-Disable
-$Script:KnownExtensions = 0         #0-Skip, 1-Show, 2-Hide*
+$Script:AeroShake = 2               #0-Skip, 1-Enable*, 2-Disable
+$Script:KnownExtensions = 1         #0-Skip, 1-Show, 2-Hide*
 $Script:HiddenFiles = 0             #0-Skip, 1-Show, 2-Hide*
 $Script:SystemFiles = 0             #0-Skip, 1-Show, 2-Hide*
 $Script:ExplorerOpenLoc = 0         #0-Skip, 1-Quick Access*, 2-ThisPC --(What location it opened when you open an explorer window)
@@ -3740,7 +3740,7 @@ $Script:FrequentFoldersQikAcc = 0   #0-Skip, 1-Show*, 2-Hide --(Frequent Folders
 $Script:WinContentWhileDrag = 0     #0-Skip, 1-Show*, 2-Hide
 $Script:StoreOpenWith = 0           #0-Skip, 1-Enable*, 2-Disable
 $Script:WinXPowerShell = 0          #0-Skip, 1-PowerShell*, 2-Command Prompt
-$Script:TaskManagerDetails = 0      #0-Skip, 1-Show, 2-Hide*
+$Script:TaskManagerDetails = 1      #0-Skip, 1-Show, 2-Hide*
 $Script:ReopenAppsOnBoot = 0        #0-Skip, 1-Enable*, 2-Disable
 $Script:Timeline = 0                #0-Skip, 1-Enable*, 2-Disable
 $Script:LongFilePath = 0            #0-Skip, 1-Enable, 2-Disable*
@@ -3748,13 +3748,13 @@ $Script:AppHibernationFile = 0      #0-Skip, 1-Enable*, 2-Disable
 
 #'This PC' Items
 # Function = Option                 #Choices (* Indicates Windows Default)
-$Script:DesktopIconInThisPC = 0     #0-Skip, 1-Show/Add*, 2-Hide, 3- Remove
+$Script:DesktopIconInThisPC = 2     #0-Skip, 1-Show/Add*, 2-Hide, 3- Remove
 $Script:DocumentsIconInThisPC = 0   #0-Skip, 1-Show/Add*, 2-Hide, 3- Remove
 $Script:DownloadsIconInThisPC = 0   #0-Skip, 1-Show/Add*, 2-Hide, 3- Remove
 $Script:MusicIconInThisPC = 0       #0-Skip, 1-Show/Add*, 2-Hide, 3- Remove
 $Script:PicturesIconInThisPC = 0    #0-Skip, 1-Show/Add*, 2-Hide, 3- Remove
 $Script:VideosIconInThisPC = 0      #0-Skip, 1-Show/Add*, 2-Hide, 3- Remove
-$Script:ThreeDobjectsIconInThisPC = 0   #0-Skip, 1-Show/Add*, 2-Hide, 3- Remove
+$Script:ThreeDobjectsIconInThisPC = 2   #0-Skip, 1-Show/Add*, 2-Hide, 3- Remove
 # CAUTION: Removing them can cause problems
 
 #Desktop Items
@@ -3769,19 +3769,19 @@ $Script:ControlPanelOnDesktop = 0   #0-Skip, 1-Show, 2-Hide*
 # Function = Option                 #Choices (* Indicates Windows Default)
 $Script:LockScreen = 0              #0-Skip, 1-Enable*, 2-Disable
 $Script:PowerMenuLockScreen = 0     #0-Skip, 1-Show*, 2-Hide
-$Script:CameraOnLockScreen = 0      #0-Skip, 1-Enable*, 2-Disable
+$Script:CameraOnLockScreen = 2      #0-Skip, 1-Enable*, 2-Disable
 
 #Misc items
 # Function = Option                 #Choices (* Indicates Windows Default)
-$Script:AccountProtectionWarn = 0   #0-Skip, 1-Enable*, 2-Disable
+$Script:AccountProtectionWarn = 2   #0-Skip, 1-Enable*, 2-Disable
 $Script:ActionCenter = 0            #0-Skip, 1-Enable*, 2-Disable
-$Script:StickyKeyPrompt = 0         #0-Skip, 1-Enable*, 2-Disable
+$Script:StickyKeyPrompt = 2         #0-Skip, 1-Enable*, 2-Disable
 $Script:NumblockOnStart = 0         #0-Skip, 1-Enable, 2-Disable*
 $Script:F8BootMenu = 0              #0-Skip, 1-Enable, 2-Disable*
 $Script:RemoteUACAcctToken = 0      #0-Skip, 1-Enable, 2-Disable*
 $Script:HibernatePower = 0          #0-Skip, 1-Enable, 2-Disable --(Hibernate Power Option)
 $Script:SleepPower = 0              #0-Skip, 1-Enable*, 2-Disable --(Sleep Power Option)
-$Script:DisableVariousTasks = 0     #0-Skip, 1-Enable*, 2-Disable some scheduled tasks (This is NOT show in GUI)
+$Script:DisableVariousTasks = 3     #0-Skip, 1-Enable*, 2-Disable some scheduled tasks (This is NOT show in GUI)
 
 # Photo Viewer Settings
 # Function = Option                 #Choices (* Indicates Windows Default)
@@ -3790,13 +3790,13 @@ $Script:PVOpenWithMenu = 0          #0-Skip, 1-Enable, 2-Disable*
 
 # Application/Feature
 # Function = Option                 #Choices (* Indicates Windows Default)
-$Script:OneDrive = 0                #0-Skip, 1-Enable*, 2-Disable
-$Script:OneDriveInstall = 0         #0-Skip, 1-Installed*, 2-Uninstall
+$Script:OneDrive = 2                #0-Skip, 1-Enable*, 2-Disable
+$Script:OneDriveInstall = 2         #0-Skip, 1-Installed*, 2-Uninstall
 $Script:XboxDVR = 0                 #0-Skip, 1-Enable*, 2-Disable
 $Script:MediaPlayer = 0             #0-Skip, 1-Installed*, 2-Uninstall
 $Script:WorkFolders = 0             #0-Skip, 1-Installed*, 2-Uninstall
 $Script:FaxAndScan = 0              #0-Skip, 1-Installed*, 2-Uninstall
-$Script:LinuxSubsystem = 0          #0-Skip, 1-Installed, 2-Uninstall* (Anniversary Update or Higher)
+$Script:LinuxSubsystem = 1          #0-Skip, 1-Installed, 2-Uninstall* (Anniversary Update or Higher)
 
 # Custom List of App to Install, Hide or Uninstall
 # I dunno if you can Install random apps with this script
@@ -3813,46 +3813,46 @@ $Script:LinuxSubsystem = 0          #0-Skip, 1-Installed, 2-Uninstall* (Annivers
 # Function  = Option  # 0-Skip, 1-Unhide, 2- Hide, 3-Uninstall (!!Read Note Above)
 $Script:APP_3DBuilder = 0           # 3DBuilder app
 $Script:APP_3DViewer = 0            # 3DViewer app
-$Script:APP_BingWeather = 0         # Bing Weather app
-$Script:APP_CommsPhone = 0          # Phone app
+$Script:APP_BingWeather = 3         # Bing Weather app
+$Script:APP_CommsPhone = 3          # Phone app
 $Script:APP_Communications = 0      # Calendar & Mail app
-$Script:APP_GetHelp = 0             # Microsoft's Self-Help App
-$Script:APP_Getstarted = 0          # Get Started link
-$Script:APP_Messaging = 0           # Messaging app
-$Script:APP_MicrosoftOffHub = 0     # Get Office Link
-$Script:APP_MovieMoments = 0        # Movie Moments app
+$Script:APP_GetHelp = 3             # Microsoft's Self-Help App
+$Script:APP_Getstarted = 3          # Get Started link
+$Script:APP_Messaging = 3           # Messaging app
+$Script:APP_MicrosoftOffHub = 3     # Get Office Link
+$Script:APP_MovieMoments = 3        # Movie Moments app
 $Script:APP_Netflix = 0             # Netflix app
 $Script:APP_OfficeOneNote = 0       # Office OneNote app
-$Script:APP_OfficeSway = 0          # Office Sway app
-$Script:APP_OneConnect = 0          # One Connect
+$Script:APP_OfficeSway = 3          # Office Sway app
+$Script:APP_OneConnect = 3          # One Connect
 $Script:APP_People = 0              # People app
 $Script:APP_Photos = 0              # Photos app
 $Script:APP_SkypeApp1 = 0           # Microsoft.SkypeApp
 $Script:APP_SolitaireCollect = 0    # Microsoft Solitaire
 $Script:APP_StickyNotes = 0         # Sticky Notes app
-$Script:APP_WindowsWallet = 0       # Stores Credit and Debit Card Information
+$Script:APP_WindowsWallet = 3       # Stores Credit and Debit Card Information
 $Script:APP_VoiceRecorder = 0       # Voice Recorder app
 $Script:APP_WindowsAlarms = 0       # Alarms and Clock app
 $Script:APP_WindowsCalculator = 0   # Calculator app
 $Script:APP_WindowsCamera = 0       # Camera app
-$Script:APP_WindowsFeedbak1 = 0     # Microsoft.WindowsFeedback
-$Script:APP_WindowsFeedbak2 = 0     # Microsoft.WindowsFeedbackHub
-$Script:APP_WindowsMaps = 0         # Maps app
-$Script:APP_WindowsPhone = 0        # Phone Companion app
+$Script:APP_WindowsFeedbak1 = 3     # Microsoft.WindowsFeedback
+$Script:APP_WindowsFeedbak2 = 3     # Microsoft.WindowsFeedbackHub
+$Script:APP_WindowsMaps = 3         # Maps app
+$Script:APP_WindowsPhone = 3        # Phone Companion app
 $Script:APP_WindowsStore = 0        # Windows Store
 $Script:APP_XboxApp = 0             # All Xbox apps (There is a few)
-$Script:APP_ZuneMusic = 0           # Groove Music app
-$Script:APP_ZuneVideo = 0           # Groove Video app
+$Script:APP_ZuneMusic = 3           # Groove Music app
+$Script:APP_ZuneVideo = 3           # Groove Video app
 
 #Values only editable here
 #Functions called on run (Uncomment to make the change upon launch of this script)
-	#AllowResponseToPings					# Allow Windows to respond to Pings to allow for network troubleshooting
-	#EnableRemoteAdminSharesWithLocalUser	# Allow a remote user to access administrative shares using a local user account
-	#EnablePSRemoting						# Allow running powershell scripts remotely
+	AllowResponseToPings					# Allow Windows to respond to Pings to allow for network troubleshooting
+	EnableRemoteAdminSharesWithLocalUser	# Allow a remote user to access administrative shares using a local user account
+	EnablePSRemoting						# Allow running powershell scripts remotely
 # Programs to recommend installation of
 #CHROME
-$WPF_googlechrome_CB.IsChecked					= $False	#'googlechrome',
-$WPF_ublockoriginchrome_CB.IsChecked			= $False	#'ublockorigin-chrome',
+$WPF_googlechrome_CB.IsChecked					= $True		#'googlechrome',
+$WPF_ublockoriginchrome_CB.IsChecked			= $True		#'ublockorigin-chrome',
 $WPF_ietab_CB.IsChecked							= $False	#'ietab-chrome',
 $WPF_fireshot_CB.IsChecked						= $False	#'fireshot-chrome',
 $WPF_chromerdh_CB.IsChecked						= $False	#'chrome-remote-desktop-host',
@@ -3865,10 +3865,10 @@ $WPF_firefox_CB.IsChecked						= $False	#'firefox',
 $WPF_ietab2_CB.IsChecked						= $False	#'ietab2-firefox',
 $WPF_ublockoriginfirefox_CB.IsChecked			= $False	#'uBlockOrigin-firefox',
 #PASSWORD MANAGEMENT
-$WPF_keepass_CB.IsChecked 						= $True		#'keepass-classic','keepass-keepasshttp','keepass-plugin-favicon',
+$WPF_keepass_CB.IsChecked 						= $False	#'keepass-classic','keepass-keepasshttp','keepass-plugin-favicon',
 $WPF_chromelpass_CB.IsChecked 					= $False	#'chromelpass-chrome',
 $WPF_keepasshttp_CB.IsChecked 					= $False	#'keepass-keepasshttp',
-$WPF_lastpass_CB.IsChecked 						= $False	#'lastpass','lastpass-for-applications','lastpass-chrome',
+$WPF_lastpass_CB.IsChecked 						= $True		#'lastpass','lastpass-for-applications','lastpass-chrome',
 $WPF_roboform_CB.IsChecked 						= $False	#'roboform',
 #SYSTEM UTILITIES
 #$WPF_.IsChecked 						= $False	#
