@@ -300,13 +300,6 @@ Function InternetCheck{ If($InternetCheck -eq 1 -or (Test-Connection www.GitHub.
 # Multi Use Functions -Start
 ##########
 
-Function ThanksDonate {
-	DisplayOut "`nThanks for using my script." -C 11
-	DisplayOut 'If you like this script please consider giving me a donation.' -C 11
-	DisplayOut "`nLink to donation:" -C 15
-	DisplayOut $Donate_Url -C 2
-}
-
 Function cmpv{ Compare-Object (Get-Variable -Scope Script) $AutomaticVariables -Property Name -PassThru | Where-Object -Property Name -ne 'AutomaticVariables' | Where-Object { $_ -NotIn $WPFList } }
 Function Openwebsite([String]$Url){ [System.Diagnostics.Process]::Start($Url) }
 Function ShowInvalid([Int]$InvalidA){ If($InvalidA -eq 1){ Write-Host "`nInvalid Input" -ForegroundColor Red -BackgroundColor Black -NoNewline } Return 0 }
@@ -3543,7 +3536,6 @@ Function RunScript {
 
 	If($Restart -eq 1 -And $Release_Type -eq 'Stable') {
 		Clear-Host
-		ThanksDonate
 		$Seconds = 15
 		DisplayOut "`nRestarting Computer in ",$Seconds,' Seconds...' -C 15,11,15
 		$Message = 'Restarting in'
@@ -3556,7 +3548,6 @@ Function RunScript {
 		If($Automated -eq 0){ Read-Host -Prompt "`nPress any key to exit" }
 		Exit
 	} ElseIf($Automated -eq 0) {
-		ThanksDonate
 		Read-Host -Prompt "`nPress any key to Exit"
 	}
 
