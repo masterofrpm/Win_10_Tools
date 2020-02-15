@@ -540,7 +540,7 @@ Function ConfigGUIitms {
 	RestorePointCBCheck
 }
 
-Function OpenSaveDiaglog([Int]$SorO) {
+Function OpenSaveDiaglog([Int]$SorO){
 	$SOFileDialog = If($SorO -eq 0){ New-Object System.Windows.Forms.OpenFileDialog } Else{ New-Object System.Windows.Forms.SaveFileDialog }
 	$SOFileDialog.InitialDirectory = $FileBase
 	$SOFileDialog.Filter = "CSV (*.csv)| *.csv"
