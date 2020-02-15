@@ -2,3 +2,5 @@ ScriptName,extension,ScriptStarterLabel,NameWithExtension,LaunchType
 NetworkShareFunction,ps1,NetworkShareFunction.ps1 (Show Source),NetworkShareFunction.ps1,text
 ToggleAudioPlaybackDevice,ps1,ToggleAudioPlaybackDevice.ps1 (Show Source),ToggleAudioPlaybackDevice.ps1,text
 Win10_GUI_Menu,ps1,Win10_GUI_Menu.ps1 (Launch),Win10_GUI_Menu.ps1,execute
+Get-PowerOptionFunction,ps1,Get-PowerOptionFunction.ps1 (Show Source),Get-PowerOptionFunction.ps1,text
+Set-HighPerformanceFunction,ps1,Set-HighPerformanceFunction.ps1 (Show Source),Set-HighPerformanceFunction.ps1,text
