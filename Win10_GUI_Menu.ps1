@@ -662,115 +662,123 @@ Title="Windows 10 Settings/Tweaks Script By: Masterofrpm (v.$Script_Version -$Sc
 					</GroupBox>
 				</Grid>
 			</TabItem>
-			<TabItem Name="Privacy_tab" Header="Privacy">
-				<Grid Background="#BB00B4E3">
-					<Grid.ColumnDefinitions>
-						<ColumnDefinition Width="*"/>
-						<ColumnDefinition Width="*"/>
-					</Grid.ColumnDefinitions>
-					<Grid Grid.Column="0">
-						<Grid.RowDefinitions>
-							<RowDefinition Height="*"/>
-							<RowDefinition Height="*"/>
-							<RowDefinition Height="*"/>
-							<RowDefinition Height="*"/>
-							<RowDefinition Height="*"/>
-							<RowDefinition Height="*"/>
-						</Grid.RowDefinitions>
-						<Grid.ColumnDefinitions>
-							<ColumnDefinition Width="18*"/>
-							<ColumnDefinition Width="20*"/>
-						</Grid.ColumnDefinitions>
-						<Label Content="Telemetry:" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-						<ComboBox Name="Telemetry_Combo" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-						<Label Content="Wi-Fi Sense:" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-						<ComboBox Name="WiFiSense_Combo" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-						<Label Content="SmartScreen Filter:" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-						<ComboBox Name="SmartScreen_Combo" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-						<Label Content="Location Tracking:" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-						<ComboBox Name="LocationTracking_Combo" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-						<Label Content="Feedback:" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-						<ComboBox Name="Feedback_Combo" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-						<Label Content="Advertising ID:" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-						<ComboBox Name="AdvertisingID_Combo" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-					</Grid>
-					<Grid Grid.Column="1">
-						<Grid.RowDefinitions>
-							<RowDefinition Height="*"/>
-							<RowDefinition Height="*"/>
-							<RowDefinition Height="*"/>
-							<RowDefinition Height="*"/>
-							<RowDefinition Height="*"/>
-							<RowDefinition Height="*"/>
-							<RowDefinition Height="*"/>
-						</Grid.RowDefinitions>
-						<Grid.ColumnDefinitions>
-							<ColumnDefinition Width="21*"/>
-							<ColumnDefinition Width="20*"/>
-						</Grid.ColumnDefinitions>
-						<Label Content="Cortana:" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-						<ComboBox Name="Cortana_Combo" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-						<Label Content="Cortana Search:" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-						<ComboBox Name="CortanaSearch_Combo" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-						<Label Content="Error Reporting:" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-						<ComboBox Name="ErrorReporting_Combo" Grid.Row="2" Grid.Column="2"  HorizontalAlignment="Left" VerticalAlignment="Center"/>
-						<Label Content="AutoLogger:" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-						<ComboBox Name="AutoLoggerFile_Combo" Grid.Row="3" Grid.Column="2"  HorizontalAlignment="Left" VerticalAlignment="Center"/>
-						<Label Content="Diagnostics Tracking:" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-						<ComboBox Name="DiagTrack_Combo" Grid.Row="4" Grid.Column="2"  HorizontalAlignment="Left" VerticalAlignment="Center"/>
-						<Label Content="WAP Push:" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-						<ComboBox Name="WAPPush_Combo" Grid.Row="5" Grid.Column="2"  HorizontalAlignment="Left" VerticalAlignment="Center"/>
-						<Label Content="App Auto Download:" Grid.Row="6" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-						<ComboBox Name="AppAutoDownload_Combo" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-					</Grid>
-				</Grid>
-			</TabItem>
-			<TabItem Name="SrvTweak_Tab" Header="Service Tweaks">
+			<TabItem Name="PrivacyTweaks_tab" Header="Privacy & Tweaks">
 				<Grid Background="#FF006C9D">
-					<Grid.ColumnDefinitions>
-						<ColumnDefinition Width="*"/>
-						<ColumnDefinition Width="*"/>
-					</Grid.ColumnDefinitions>
-					<Grid Grid.Column="0">
-						<Grid.RowDefinitions>
-							<RowDefinition Height="*"/>
-							<RowDefinition Height="*"/>
-							<RowDefinition Height="*"/>
-							<RowDefinition Height="*"/>
-						</Grid.RowDefinitions>
-						<Grid.ColumnDefinitions>
-							<ColumnDefinition Width="7*"/>
-							<ColumnDefinition Width="5*"/>
-						</Grid.ColumnDefinitions>
-						<Label Content="UAC Level:" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-						<ComboBox Name="UAC_Combo" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-						<Label Content="Sharing mapped drives:" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-						<ComboBox Name="SharingMappedDrives_Combo" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-						<Label Content="Administrative Shares:" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-						<ComboBox Name="AdminShares_Combo" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-						<Label Content="Firewall:" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-						<ComboBox Name="Firewall_Combo" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-					</Grid>
-					<Grid Grid.Column="1">
-						<Grid.RowDefinitions>
-							<RowDefinition Height="*"/>
-							<RowDefinition Height="*"/>
-							<RowDefinition Height="*"/>
-							<RowDefinition Height="*"/>
-						</Grid.RowDefinitions>
-						<Grid.ColumnDefinitions>
-							<ColumnDefinition Width="7*"/>
-							<ColumnDefinition Width="5*"/>
-						</Grid.ColumnDefinitions>
-						<Label Content="Windows Defender:" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-						<ComboBox Name="WinDefender_Combo" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-						<Label Content="HomeGroups:" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-						<ComboBox Name="HomeGroups_Combo" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-						<Label Content="Remote Assistance:" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-						<ComboBox Name="RemoteAssistance_Combo" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-						<Label Content="Remote Desktop w/o &#xD;&#xA;Network Authentication:" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-						<ComboBox Name="RemoteDesktop_Combo" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-					</Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+					</Grid.RowDefinitions>
+					<GroupBox Header="Privacy" Grid.Row="0" Margin="2" Background="#BB00B4E3">
+						<Grid>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="*"/>
+								<ColumnDefinition Width="*"/>
+							</Grid.ColumnDefinitions>
+							<Grid Grid.Column="0">
+								<Grid.RowDefinitions>
+									<RowDefinition Height="*"/>
+									<RowDefinition Height="*"/>
+									<RowDefinition Height="*"/>
+									<RowDefinition Height="*"/>
+									<RowDefinition Height="*"/>
+									<RowDefinition Height="*"/>
+								</Grid.RowDefinitions>
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition Width="18*"/>
+									<ColumnDefinition Width="20*"/>
+								</Grid.ColumnDefinitions>
+								<Label Content="Telemetry:" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+								<ComboBox Name="Telemetry_Combo" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+								<Label Content="Wi-Fi Sense:" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+								<ComboBox Name="WiFiSense_Combo" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+								<Label Content="SmartScreen Filter:" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+								<ComboBox Name="SmartScreen_Combo" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+								<Label Content="Location Tracking:" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+								<ComboBox Name="LocationTracking_Combo" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+								<Label Content="Feedback:" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+								<ComboBox Name="Feedback_Combo" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+								<Label Content="Advertising ID:" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+								<ComboBox Name="AdvertisingID_Combo" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+							</Grid>
+							<Grid Grid.Column="1">
+								<Grid.RowDefinitions>
+									<RowDefinition Height="*"/>
+									<RowDefinition Height="*"/>
+									<RowDefinition Height="*"/>
+									<RowDefinition Height="*"/>
+									<RowDefinition Height="*"/>
+									<RowDefinition Height="*"/>
+									<RowDefinition Height="*"/>
+								</Grid.RowDefinitions>
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition Width="21*"/>
+									<ColumnDefinition Width="20*"/>
+								</Grid.ColumnDefinitions>
+								<Label Content="Cortana:" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+								<ComboBox Name="Cortana_Combo" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+								<Label Content="Cortana Search:" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+								<ComboBox Name="CortanaSearch_Combo" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+								<Label Content="Error Reporting:" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+								<ComboBox Name="ErrorReporting_Combo" Grid.Row="2" Grid.Column="2"  HorizontalAlignment="Left" VerticalAlignment="Center"/>
+								<Label Content="AutoLogger:" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+								<ComboBox Name="AutoLoggerFile_Combo" Grid.Row="3" Grid.Column="2"  HorizontalAlignment="Left" VerticalAlignment="Center"/>
+								<Label Content="Diagnostics Tracking:" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+								<ComboBox Name="DiagTrack_Combo" Grid.Row="4" Grid.Column="2"  HorizontalAlignment="Left" VerticalAlignment="Center"/>
+								<Label Content="WAP Push:" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+								<ComboBox Name="WAPPush_Combo" Grid.Row="5" Grid.Column="2"  HorizontalAlignment="Left" VerticalAlignment="Center"/>
+								<Label Content="App Auto Download:" Grid.Row="6" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+								<ComboBox Name="AppAutoDownload_Combo" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+							</Grid>
+						</Grid>
+					</GroupBox>
+					<GroupBox Header="Tweaks" Grid.Row="0" Margin="2" Background="#BB00B4E3">
+						<Grid>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="*"/>
+								<ColumnDefinition Width="*"/>
+							</Grid.ColumnDefinitions>
+							<Grid Grid.Column="0">
+								<Grid.RowDefinitions>
+									<RowDefinition Height="*"/>
+									<RowDefinition Height="*"/>
+									<RowDefinition Height="*"/>
+									<RowDefinition Height="*"/>
+								</Grid.RowDefinitions>
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition Width="7*"/>
+									<ColumnDefinition Width="5*"/>
+								</Grid.ColumnDefinitions>
+								<Label Content="UAC Level:" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+								<ComboBox Name="UAC_Combo" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+								<Label Content="Sharing mapped drives:" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+								<ComboBox Name="SharingMappedDrives_Combo" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+								<Label Content="Administrative Shares:" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+								<ComboBox Name="AdminShares_Combo" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+								<Label Content="Firewall:" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+								<ComboBox Name="Firewall_Combo" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+							</Grid>
+							<Grid Grid.Column="1">
+								<Grid.RowDefinitions>
+									<RowDefinition Height="*"/>
+									<RowDefinition Height="*"/>
+									<RowDefinition Height="*"/>
+									<RowDefinition Height="*"/>
+								</Grid.RowDefinitions>
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition Width="7*"/>
+									<ColumnDefinition Width="5*"/>
+								</Grid.ColumnDefinitions>
+								<Label Content="Windows Defender:" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+								<ComboBox Name="WinDefender_Combo" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+								<Label Content="HomeGroups:" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+								<ComboBox Name="HomeGroups_Combo" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+								<Label Content="Remote Assistance:" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+								<ComboBox Name="RemoteAssistance_Combo" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+								<Label Content="Remote Desktop w/o &#xD;&#xA;Network Authentication:" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+								<ComboBox Name="RemoteDesktop_Combo" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+							</Grid>
+						</Grid>
+					</GroupBox>
 				</Grid>
 			</TabItem>
 			<TabItem Name="Context_Tab" Header="Context Menu, &#xD;&#xA;Start Menu">
@@ -3837,9 +3845,9 @@ $Script:APP_ZuneVideo = 3           # Groove Video app
 
 #Values only editable here
 #Functions called on run (Uncomment to make the change upon launch of this script)
-	AllowResponseToPings					# Allow Windows to respond to Pings to allow for network troubleshooting
-	EnableRemoteAdminSharesWithLocalUser	# Allow a remote user to access administrative shares using a local user account
-	EnablePSRemoting						# Allow running powershell scripts remotely
+	#AllowResponseToPings					# Allow Windows to respond to Pings to allow for network troubleshooting
+	#EnableRemoteAdminSharesWithLocalUser	# Allow a remote user to access administrative shares using a local user account
+	#EnablePSRemoting						# Allow running powershell scripts remotely
 # Programs to recommend installation of
 #CHROME
 $WPF_googlechrome_CB.IsChecked					= $True		#'googlechrome',
