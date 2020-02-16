@@ -731,7 +731,7 @@ Title="Windows 10 Settings/Tweaks Script By: Masterofrpm (v.$Script_Version -$Sc
 							</Grid>
 						</Grid>
 					</GroupBox>
-					<GroupBox Header="Tweaks" Grid.Row="0" Margin="2" Background="#BB00B4E3">
+					<GroupBox Header="Tweaks" Grid.Row="1" Margin="2" Background="#BB00B4E3">
 						<Grid>
 							<Grid.ColumnDefinitions>
 								<ColumnDefinition Width="*"/>
