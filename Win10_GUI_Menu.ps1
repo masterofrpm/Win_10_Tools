@@ -662,11 +662,11 @@ Title="Windows 10 Settings/Tweaks Script By: Masterofrpm (v.$Script_Version -$Sc
 					</GroupBox>
 				</Grid>
 			</TabItem>
-			<TabItem Name="PrivacyTweaks_tab" Header="Privacy & Tweaks">
+			<TabItem Name="PrivacyTweaks_tab" Header="Privacy and Tweaks">
 				<Grid Background="#FF006C9D">
 					<Grid.RowDefinitions>
-						<RowDefinition Height="*"/>
-						<RowDefinition Height="*"/>
+						<RowDefinition Height="6*"/>
+						<RowDefinition Height="4*"/>
 					</Grid.RowDefinitions>
 					<GroupBox Header="Privacy" Grid.Row="0" Margin="2" Background="#BB00B4E3">
 						<Grid>
