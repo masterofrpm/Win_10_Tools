@@ -1,0 +1,33 @@
+FriendlyName,AppName,Package,AlternateSource
+Google Chrome,googlechrome,chromebase,corp
+Chrome Extension - uBlock Origin,ublockorigin-chrome,chromebase,none
+Back to Backspace for Chrome,back-to-backspace-chrome,chromebase,none
+Chrome Extension - Google Voice,google-voice-chrome,chromegen,none
+Chrome Extension - Google Translate,google-translate-chrome,chromegen,none
+Chrome Extension - Remote Desktop Host,chrome-remote-desktop-host,chromegen,none
+Chrome Extension - Remote Desktop,chrome-remote-desktop-chrome,chromegen,none
+Chrome Extension - EXIF Viewer,exifviewer-chrome,chromegen,none
+Chrome Extension - Google Cast,google-cast-chrome,chromegen,none
+Chrome Extension - Save to Google Drive,save-to-google-drive-chrome,chromegen,none
+Chrome Extension - Search by Image,search-by-image-chrome,chromegen,none
+Chrome Extension - Lastpass,lastpass-chrome,passwordmanagement,none
+VideoLAN(VLC),vlc,common,none
+irfanView w/ Plugins,irfanviewplugins,common,none
+irfanView Shell Extensions,irfanview-shellextension,common,none
+Notepad++,notepadplusplus,common,none
+Notepad++ Plugin Manager,notepadplusplus-npppluginmanager,common,none
+7zip,7zip.install,common,none
+Spotify,spotify,common,none
+Bind Tools (such as dig),bind-toolsonly,utilities,none
+Calibre,calibre,utilities,none
+4K Video Downloader,4k-video-downloader,mediamanipulation,none
+AnyDVD,anydvd,mediamanipulation,none
+ATubeCatcher,atubecatcher,mediamanipulation,none
+Advanced System Tweaker,advancedsystemtweaker,Uncategorized,none
+Heaven Benchmark Utility,heaven-benchmark,Uncategorized,none
+HTTrack,httrack,Uncategorized,none
+HTTrack App,httrack.app,Uncategorized,none
+Teamviewer,teamviewer,Uncategorized,none
+XnView,xnview,Uncategorized,none
+MediaMonkey,mediamonkey,Uncategorized,none
+VMware Workstation Player,vmware-workstation-player,Uncategorized,none
