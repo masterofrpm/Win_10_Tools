@@ -1,18 +1,16 @@
 FriendlyName,AppName,Package,AlternateSource
-Google Chrome,googlechrome,chromebase,corp
-Chrome Extension - uBlock Origin,ublockorigin-chrome,chromebase,none
-Chrome Extension - IE Tab,ietab-chrome,chromebase,none
-Back to Backspace for Chrome,back-to-backspace-chrome,chromebase,none
-
-Chrome Cache View,chromecacheview,chromedev,none
-Chrome Cookie Backup,chromecookiebackup,chromedev,none
-Chrome Cookies View,chromecookiesview,chromedev,none
-Chrome Driver,chromedriver,chromedev,none
-Chrome History View,chromehistoryview,chromedev,none
-Chrome Extension - Github Hovercard,github-hovercard-chrome,chromedev,none
-Chrome Extension - Github Expandinizer,googlechrome-github-expandinizr,chromedev,none
-
-Chrome Extension - Grammarly,grammarly-chrome,chromegen,none
+Google Chrome,googlechrome,base,corp
+Chrome Extension - uBlock Origin,ublockorigin-chrome,base,none
+Back to Backspace for Chrome,back-to-backspace-chrome,base,none
+Chrome Extension - IE Tab,ietab-chrome,chromeadd,none
+Chrome Cache View,chromecacheview,chromeadd,none
+Chrome Cookie Backup,chromecookiebackup,chromeadd,none
+Chrome Cookies View,chromecookiesview,chromeadd,none
+Chrome Driver,chromedriver,chromeadd,none
+Chrome History View,chromehistoryview,chromeadd,none
+Chrome Extension - Github Hovercard,github-hovercard-chrome,chromeadd,none
+Chrome Extension - Github Expandinizer,googlechrome-github-expandinizr,chromeadd,none
+Chrome Extension - Grammarly,grammarly-chrome,chromeadd,none
 Chrome Extension - Google Voice,google-voice-chrome,chromegen,none
 Chrome Extension - Google Translate,google-translate-chrome,chromegen,none
 Chrome Extension - Fireshot,fireshot-chrome,chromegen,none
@@ -23,7 +21,6 @@ Chrome Extension - Google Cast,google-cast-chrome,chromegen,none
 Chrome Extension - Plex,plex-chrome,chromegen,none
 Chrome Extension - Save to Google Drive,save-to-google-drive-chrome,chromegen,none
 Chrome Extension - Search by Image,search-by-image-chrome,chromegen,none
-
 Google Backup and Sync,google-backup-and-sync,googleapps,none
 Google Books Downloader,google-books-downloader,googleapps,none
 Chrome Extension - Google Calendar,google-calendar-chrome,googleapps,none
@@ -34,556 +31,523 @@ Google Earth,googleearth,googleapps,none
 Google Hangouts,google-hangouts-chat,googleapps,none
 Google Play - Music Manager,google-play-music-manager,googleapps,none
 Google Web Designer,google-web-designer,googleapps,none
-
 Mozilla Firefox,firefox,firefox,none
 Firefox Extension - IE Tab,ietab2-firefox,firefox,none
 Firefox Extension - uBlock Origin,uBlockOrigin-firefox,firefox,none
-
 KeePass Classic,keepass-classic,passwordmanagement,none
 Chrome Extension - ChromelPass,chromelpass-chrome,passwordmanagement,none
 KeePass Plugin - KeePass HTTP,keepass-keepasshttp,passwordmanagement,none
 Chrome Extension - Lastpass,lastpass-chrome,passwordmanagement,none
 Roboform,roboform,passwordmanagement,none
-
 VideoLAN(VLC),vlc,common,none
 irfanView w/ Plugins,irfanviewplugins,common,none
 irfanView Shell Extensions,irfanview-shellextension,common,none
 Notepad++,notepadplusplus,common,none
-Notepad++ Settings,Notepadplusplus.Settings,common,none
 Notepad++ Plugin Manager,notepadplusplus-npppluginmanager,common,none
 7zip,7zip.install,common,none
 Spotify,spotify,common,none
 FoxitReader,FoxitReader,common,none
-
 Bind Tools (such as dig),bind-toolsonly,utilities,none
 VMWare Horizon Client,vmwarehorizonclient,utilities,corp
 iPerf3,iperf3,utilities,none
 Calibre,calibre,utilities,none
-
 4K Video Downloader,4k-video-downloader,mediamanipulation,none
 AnyDVD,anydvd,mediamanipulation,none
 ATubeCatcher,atubecatcher,mediamanipulation,none
 Audacity with ffmpeg plugin,audacity-ffmpeg,mediamanipulation,none
 Audacity with lame plugin,audacity-lame,mediamanipulation,none
 AVI Demux,avidemux,mediamanipulation,none
-
-#SYSTEM UTILITIES
-advanced-bat-to-exe-converter 4.11 [Approved]
-advancedsystemtweaker 2.0.0.20141128 [Approved]
-
-#NETWORK UTILITIES
-advanced-ip-scanner 2.5.3850 [Approved]
-angryip 3.6.2 [Approved]
-
-###############################
-AVAILABLE ON CORP CHOCO SERVER
-###############################
-	
-filezilla 3.46.3
-icbusinessmanager 18.2.18.16
-icoms 8.3382.1.208
-interactiondesktop 18.2.18.16
-nim 8.3.4
-office365 16.0.12130.20272
-Office365ProPlus 2020.0.0.1
-Office365Visio 2020.0.0.1
-pdfcreator 3.2.0
-webexmeetingsapp 39.11.2.4
-webexprodtools 39.11.1.2
-webexteams 3.0.14375
-wireshark 3.0.6
-
-####################################################################
-#TWEAKS
-commandWindowHere 1.0.2 [Approved]
-PowerShellHere 0.0.3 [Approved] - Possibly broken
-powershellhere-elevated 1.0.0 [Approved]
-search-by-image-chrome 1.5.2 [Approved]
-searchwithmybrowser 1.1.2 [Approved]
-
-#SYSTEM UTILITIES
-advancedsystemtweaker 2.0.0.20141128 [Approved]
-audioswitcher 1.8.0.142 [Approved]
-makemeadmin 2.3 [Approved]
-SetDefaultPrinter 1.0.1 [Approved]
-SettingsManager 0.0.1
-simplesystemtweaker 2.0.0.20141201 [Approved]
-startmenureviver 2.5.0.18 [Approved]
-ultimate-settings-panel 6.5 [Approved]
-ultimate-settings-panel-lite 5.1 [Approved] - Possibly broken
-
-#CLI UTILITIES
-Bat 0.12.1 [Approved]
-awk 4.2.132 [Approved]
-curl 7.68.0 [Approved]
-dd 0.5 [Approved] - Possibly broken
-grep 2.1032 [Approved]
-grepwin 1.9.2 [Approved]
-Less 5.51.0.20191024 [Approved]
-lessmsi 1.6.91 [Approved]
-
-#NETWORK UTILITIES
-advanced-ip-scanner 2.5.3850 [Approved]
-angryip 3.6.2 [Approved]
-dnsagent 1.6.5781.1 [Approved]
-dns-benchmark 1.3.6668.20190425 [Approved]
-dnscontrol-cli 2.9 [Approved]
-dnsdataview 1.56 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
-dnsjumper 2.1 [Approved]
-dnsquerysniffer 1.80 [Approved]
-gns3 2.2.5 [Approved]
-gperf 3.1 [Approved]
-inssider 3.1.2.13 [Approved]
-lanbench 1.1.0.20180725 [Approved]
-lanmonitor 10.32.8 [Approved]
-lan-speed-test.portable 4.4.0 [Approved]
-macaddressview 1.42 [Approved]
-netio-gui 1.0.4 [Approved]
-netscan.install 6.2.1 [Approved]
-netscan32 5.4.9.20160330 [Approved] - Possibly broken
-netscan64 5.4.9.20160330 [Approved] - Possibly broken
-netstat-agent 3.6 [Approved]
-netstat-agent.portable 3.6 [Approved]
-netstat-viewer 1.0.20180725 [Approved]
-netstress 2.0.9686 [Approved]
-netsurf 3.6 [Approved]
-nettime 3.14.20161102 [Approved]
-networkconnectlog 1.11 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
-networkinterfacesview 1.15 [Approved]
-networklatencyview 1.65 [Approved]
-NETworkManager 2019.12.0 [Approved]
-networkmonitor 3.4.0.20140224
-networkusageview 1.13 [Approved]
-networx 6.2.5 [Approved]
-open-visual-traceroute 1.7.1 [Approved]
-pingplotter 5.15.1 [Approved]
-tcp 1.0 [Approved]
-tcp-cloud 2.10 [Approved]
-tcp-csvview 0.9.5.1 [Approved]
-tcp-diskdirextended 1.67 [Approved]
-tcp-envvars 1.0 [Approved]
-tcp-fileinfo 2.23 [Approved]
-tcp-iclview 5.7.2019 [Approved]
-tcping 0.39.20180614 [Approved]
-tcpipmanager 4.1.1 [Approved]
-tcpipmanager.install 4.1.1 [Approved]
-tcpipmanager.portable 4.1.1 [Approved]
-tcp-linkinfo 1.5.2 [Approved]
-tcp-mediainfo 1.0.3 [Approved]
-TCPOptimizer 3.0.8 [Approved]
-tcp-peviewer 2.0 [Approved]
-tcps 0.3 [Approved]
-tcp-services2 0.8.1 [Approved]
-tcp-shelldetails 1.26 [Approved]
-tcp-startups 0.4.0 [Approved]
-tcptrace 0.8.1.717 [Approved]
-tcp-uninstaller 1.0.1.20191007 [Approved]
-tcpvcon 3.05 [Approved]
-tcp-virtualpanel 2.0.7.1372 [Approved]
-tcp-webdav 3.0 [Approved]
-
-#DEVELOPMENT
-git.install 2.25.0 [Approved]
-Git-Credential-Manager-for-Windows 1.20.0 [Approved]
-GitHub 3.2.0.20181119 [Approved]
-githubforwindows 2.13.0.2 [Approved]
-HTMLConverter 3.1
-htmldocedit 1.02 [Approved]
-html-help-workshop 1.32 [Approved]
-HtmlPackager 0.1.6.5 [Approved]
-html-tidy 5.6.0 [Approved]
-HttpRest 3.0
-httrack 3.49.2 [Approved]
-httrack.app 3.49.2 [Approved]
-initool 0.9.0 [Approved]
-manifest-tool 1.0.0 [Approved]
-php 7.4.1 [Approved]
-	php-manager 2.4.0 [Approved]
-	php-service 7.4.1 [Approved]
-phpstorm 2019.3.1 [Approved]
-python2 2.7.17 [Approved]
-python3-x86_32 3.5.2.20170425 [Approved] - Possibly broken
-	or python-x86_32 3.5.2.20170425 [Approved] - Possibly broken
-quick-javascript-switcher-chrome 1.4.1.20170115 [Approved]
-sslverifier 1.3.0.1 [Approved]
-vscode.install 1.41.1 [Approved]
-	vscode-autohotkey 0.2.2 [Approved]
-
-#MEDIA CREATORS & EDITORS
-audacity-ffmpeg 2.2.2.20181007 [Approved]
-audacity-lame 3.100.0.20190331 [Approved]
-gimp 2.10.14 [Approved]
-obs 0.659 [Approved]
-screentogif 2.19.3 [Approved]
-
-#SERVICES
-atnow 1.1 [Approved]
-autohotkey.install 1.1.32.00 [Approved]
-autoit 3.3.14.5 [Approved]
-tftpd32 4.60 [Approved]
-
-explorer-show-all-folders 1.0.0 [Approved]
-explorer-winconfig 0.0.1 [Approved]
-foobar2000 1.5.1 [Approved]
-httping 2.5 [Approved]
-io-unlocker 1.1.2.1 [Approved]
-OpenShark 1.4
-orionsdk 2.5.0.214 [Approved]
-putty.install 0.73 [Approved]
-scribus 1.4.8 [Approved]
-seamonkey 2.49.5 [Approved]
-sendmessage 1.1.2 [Approved]
-shutdownguard 1.0.0.20160912 [Approved]
-silentcmd 1.0.12.2019 [Approved]
-startbluescreen 1.00 [Approved]
-Sudo 1.1.2 [Approved]
-TeraCopy 3.26.3.20190627 [Approved]
-traffic-monitor 1.77 [Approved]
-trafficwatcher 2.0.1 [Approved]
-usblogon 1.8.1.2 [Approved]
-#######################################################
-
-android-sdk 26.1.1 [Approved]
-atnow 1.1 [Approved]
-audioswitcher 1.8.0.142 [Approved]
-autoclicker 3.0 [Approved]
-autohotkey.install 1.1.32.00 [Approved]
-autohotkey.portable 1.1.32.00 [Approved]
-autoit 3.3.14.5 [Approved]
-autoit.commandline 3.3.14.2 [Approved]
-autologon 3.10 [Approved]
-AutoRuns 13.96 [Approved]
-awk 4.2.132 [Approved]
-awscli 1.17.3 [Approved]
-axcrypt 2.1.1585.0 [Approved]
-Bat 0.12.1 [Approved]
-batch-docs 5.6.0 [Approved]
-batch-encoding-converter 5.0.0 [Approved]
-batch-file-encrypt 5.0.0 [Approved]
-batch-file-manager 5.0.0 [Approved]
-batch-files 5.0.0 [Approved]
-batch-hex-editor 5.0.0 [Approved]
-batch-image-converter 5.6.0 [Approved]
-batch-image-enhancer 5.6.0 [Approved]
-batch-image-resizer 5.6.0 [Approved]
-batch-photo-face 5.6.0 [Approved]
-batch-regex 5.0.0 [Approved]
-batch-text-file-editor 5.0.0 [Approved]
-batch-word-replace 5.6.0 [Approved]
-belarcadvisor 8.5 [Approved]
-bind-toolsonly 9.14.2 [Approved]
-Bitnami-XAMPP 7.3.4 [Approved]
-bluetoothview 1.66 [Approved]
-bluetracker-cli 1.3.2 [Approved]
-Blur-IE 5.5.1930 [Approved]
-bonjour 2.0.2.0 [Approved]
-browsinghistoryview 2.21 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
-cameraraw 9.12.1 [Approved]
-cameyo 3.1.1446 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
-camstudio 2.7.316.20161004 [Approved]
-camtasia 2019.0.8.1748400 [Approved]
-camunda-bpm-tomcat 7.11.0 [Approved]
-camunda-modeler 3.5.0 [Approved]
-ccleaner 5.63.7540 [Approved]
-ccleaner.portable 5.63.0.7540 [Approved]
-change-dns-servers 1.0.0 [Approved]
-choco-cleaner 0.0.7 [Approved]
-chocolatey.server 0.2.5 [Approved]
-chocolatey-core.extension 1.3.5.1 [Approved]
-ChocolateyExplorer 0.2.2.111 [Approved] - Possibly broken
-chocolatey-fastanswers.extension 0.0.2 [Approved]
-ChocolateyGUI 0.16.0 [Approved]
-chocolatey-nexus-repo 1.0.0 [Approved]
-ChocolateyPackageUpdater 0.6.13.0 [Approved]
-chocolateypowershell 0.0.2.1 [Approved]
-chocolatey-toast.extension 1.0.1 [Approved]
-chocolatey-vscode 0.7.1 [Approved]
-chocolatey-vscode.extension 1.1.0 [Approved]
-chocolatey-windowsupdate.extension 1.0.4 [Approved]
-choco-optimize-at 0.0.1.1 [Approved]
-choco-package-deprecater 2019.09.03 [Approved]
-choco-persistent-packages 2018.05.06 [Approved]
-choco-protocol-support 0.0.1 [Approved]
-ChocoShortcuts 0.4.1 [Approved]
-choco-upgrade-all-at 0.0.5 [Approved]
-choco-upgrade-all-at-startup 2018.08.23 [Approved]
-collectdwin 0.5.19 [Approved]
-collectw.service 1.0.32.0 [Approved]
-commandWindowHere 1.0.2 [Approved]
-convertall 0.6.0 [Approved]
-curl 7.68.0 [Approved]
-Cygwin 3.1.2 [Approved]
-dd 0.5 [Approved] - Possibly broken
-ddecmd 1.6 [Approved]
-ddev 1.12.1 [Approved]
-deluge 1.3.15 [Approved]
-disableuac 0.0.3 [Approved]
-disable-windows10-upgrade 1.2.0 [Approved]
-discord.install 0.0.305 [Approved]
-discordchatexporter 2.11 [Approved]
-disk2vhd 2.01.0.20160213 [Approved]
-disksmartview 1.21 [Approved]
-dllexp 1.66 [Approved]
-dnsagent 1.6.5781.1 [Approved]
-dns-benchmark 1.3.6668.20190425 [Approved]
-dnscontrol-cli 2.9 [Approved]
-dnscrypt-proxy 2.0.36 [Approved]
-dnsdataview 1.56 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
-dnsjumper 2.1 [Approved]
-dnsquerysniffer 1.80 [Approved]
-ekiga 4.0.1.01 [Approved]
-enigmavirtualbox 9.20 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
-exifdataview 1.06 [Approved]
-exiftool 11.84 [Approved]
-explorer-show-all-folders 1.0.0 [Approved]
-explorer-winconfig 0.0.1 [Approved]
-expressionweb 4.0.1460.0 [Approved]
-ext2explore 2.2.71.20100623 [Approved]
-ext2fsd 0.69.0.20171118 [Approved]
-fastresolver.install 1.26 [Approved]
-faviconizer 1.4 [Approved]
-FileFormatConverters 1.0.1 - Possibly broken
-filezilla 3.46.3 [Approved]
-findandreplace 2.0 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
-find-and-run-robot.install 2.234.01 [Approved]
-find-and-run-robot.portable 2.234.01 [Approved]
-foobar2000 1.5.1 [Approved]
-force-cli 0.26.9 [Approved]
-FoxitReader 9.7.0.29455 [Approved]
-fraps 3.5.99.20150108 [Approved] - Possibly broken
-genuinetools 0.0.1 [Approved]
-getignore 1.0.0.20170723 [Approved]
-gifcam 6.0.0.0 [Approved]
-gimp 2.10.14 [Approved]
-git.commandline 2.11.0.20170203 [Approved]
-git.install 2.25.0 [Approved]
-git.portable 2.25.0 [Approved]
-gitahead 2.6.1 [Approved]
-git-annex 7.20190627 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
-gitblit 1.6.2 [Approved]
-git-cola 3.6 [Approved]
-Git-Credential-Manager-for-Windows 1.20.0 [Approved]
-git-credential-winstore 2.0.0.20151206 [Approved]
-GitDepend.Portable 0.5.0 [Approved]
-git-disable-gcm 1.0.0 [Approved]
-gitea 1.10.2 [Approved]
-gitextensions 3.3.1 [Approved]
-gitextensions.portable 3.3.1 [Approved]
-giteye 1.5.0
-gitflow-avh 0.0.0 [Approved]
-git-flow-dependencies 0.2 - Possibly broken
-git-flow-hooks 1.0.4 [Approved]
-git-fork 1.43.3 [Approved]
-gitg 3.32.1 [Approved]
-gitg.install 3.32.1 [Approved]
-git-helper 1.5 - Possibly broken
-GitHub 3.2.0.20181119 [Approved]
-github-build-from-label 1.1 - Possibly broken
-githubforwindows 2.13.0.2 [Approved]
-githublink 2.3.0 [Approved]
-githubreleasenotes 1.0.5.2 [Approved]
-githubsearch 1.2.2 [Approved]
-git-it 4.4.0 [Approved]
-gitkraken 6.4.1 [Approved]
-gitlab-runner 12.6.0 [Approved]
-git-lfs 2.9.2 [Approved]
-git-lfs.install 2.9.2 [Approved]
-gitlink 3.0.0 [Approved]
-gitpad 1.2 [Approved]
-git-phlow 3.8.20 [Approved]
-git-sizer 1.3.0 [Approved]
-GitSvnExternals 1.1.0.7
-Git-TF 2.0.3.20131219 [Approved]
-GitVersion 1.0.0.1
-GitVersion.Portable 5.1.3 [Approved]
-GitVersioner 1.0.1.14 [Approved]
-gitviz 0.8 [Approved]
-glaryutilities-free 5.80 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
-glyphr-studio-desktop 0.5.4 [Approved]
-gns3 2.2.5 [Approved]
-gnucash 3.8 [Approved]
-GnuWin 0.6.3.1 - Possibly broken
-gnuwin32-coreutils.install 5.3.0 [Approved]
-gnuwin32-coreutils.portable 5.3.0 [Approved]
-gperf 3.1 [Approved]
-grammarly 1.5.58.0 [Approved]
-graph 4.4.2.20170413 [Approved]
-grep 2.1032 [Approved]
-grepwin 1.9.2 [Approved]
-grub2win 1.0.5.8 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
-grubinst 1.0.1 [Approved]
-gsudo 0.5 [Approved]
-gsuite-migration-exchange 5.1.20.0 [Approved]
-gsuite-migration-outlook 4.0.117.10 [Approved]
-gsuite-sync-outlook 4.1.25.0 [Approved]
-gtools 4.2 [Approved]
-gzip 1.3.12 [Approved]
-h264tscutter 1.1.1.20161125 [Approved]
-handyimagemapper 2.0.0.0 [Approved]
-hardentools 1.0 [Approved]
-hardware-freak 2.0.20161030 [Approved]
-Hardwipe 5.1.3 [Approved]
-hddguardian 0.6.2 [Approved] - Possibly broken
-hddguardian.install 0.6.2 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
-hddguardian.portable 0.6.2 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
-hdguard 10.0.0.4 [Approved]
-hdhomerun-view 2019.06.21 [Approved]
-hdparm 6.9.2 [Approved]
-hdrmerge 0.5.0 [Approved]
-hdtune 2.55.0.1 [Approved]
-heaven-benchmark 4.0 [Approved]
-hfsexplorer 0.23.1 [Approved]
-hijackthis 2.9.0.1 [Approved]
-hot-chocolatey 7.0.1.0 [Approved]
-hp-bios-cmdlets 1.1.0.101 [Approved]
-hp-coolsense-technology 2.10.51 [Approved]
-hpglviewer 5.43.0.20180521 [Approved]
-hp-ilo-cmdlets 1.4.0.1 [Approved]
-hp-oa-cmdlets 1.1.0.701 [Approved]
-hp-universal-print-driver-pcl 6.8.0.24296 [Approved]
-hsm-usb-serial-driver 3.5.9 [Approved]
-HTMLConverter 3.1
-htmldocedit 1.02 [Approved]
-html-help-workshop 1.32 [Approved]
-HtmlPackager 0.1.6.5 [Approved]
-html-tidy 5.6.0 [Approved]
-httping 2.5 [Approved]
-HttpRest 3.0
-httpsysmanager 1.5 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
-httrack 3.49.2 [Approved]
-httrack.app 3.49.2 [Approved]
-hulu.desktop 0.9.14.2 - Possibly broken
-hwinfo.install 6.20 [Approved]
-hwinfo.portable 6.20 [Approved]
-hwmonitor 1.41.0.20191013 [Approved]
-icecast 2.4.4 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
-ietab2-firefox 6.2.18.120161009 [Approved] - Possibly broken
-iis.administration 2.2.0 [Approved]
-iis75.express 7.5.1
-iis-application-initialization 1.1 [Approved]
-iis-arr 3.0.20180207 [Approved]
-iis-cors-module 1.0 [Approved]
-iisexpress 10.0.0.20181007 [Approved]
-iis-externalcache 1.1.20151123 [Approved] - Possibly broken
-iisgeolocate 1.4.0.1 [Approved]
-iishosts 1.0.1 [Approved]
-iis-media-services 4.1.20160504 [Approved] - Possibly broken
-iissecurity-psmodule 1.3.0 [Approved]
-imageanalyzer 1.38.4 [Approved]
-imagemagick.tool 7.0.9.16 [Approved]
-imgburn 2.5.8.20170708 [Approved]
-initool 0.9.0 [Approved]
-innoextract 1.8 [Approved]
-InnoSetup 6.0.3 [Approved]
-inssider 3.1.2.13 [Approved]
-io-unlocker 1.1.2.1 [Approved]
-iperf3 3.1.3 [Approved]
-irfanviewplugins 4.54 [Approved]
-irfanview-shellextension 1.06 [Approved]
-ispy 6.5.0.0 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
-keyfinder 2.0.10.13 [Approved]
-kitty 0.73.1.5 [Approved]
-kitty.portable 0.67.0.0 [Approved]
-lame 3.100.20190612 [Approved]
-lame-front-end 1.8.1 [Approved]
-lamexp 4.18 [Approved]
-lanbench 1.1.0.20180725 [Approved]
-lanconfig 10.32.18 [Approved]
-lanmessenger 1.2.35 [Approved]
-lanmonitor 10.32.8 [Approved]
-lan-speed-test.portable 4.4.0 [Approved]
-leagueoflegends 1.0.0.20171207 [Approved]
-leagueoflegendseuw 1.0.0.0 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
-leanify 0.4.2 [Approved]
-Less 5.51.0.20191024 [Approved]
-lessmsi 1.6.91 [Approved]
-line 5.20.2.2045 [Approved]
-logitechcamerasettings 2.10.4.0
-logitechgaming 9.02.65 [Approved]
-logitech-media-server 7.9.1 [Approved]
-logitech-options 7.14.70 [Approved]
-logitech-presentation 1.52.24 [Approved]
-logitech-webcam-software 2.80.853.0 [Approved]
-Lua 5.1.5.52 [Approved]
-lua53 5.3.5 [Approved]
-luabuglight 2.3.20161105 [Approved]
-luarocks 2.4.4 [Approved]
-macaddressview 1.42 [Approved]
-make 4.2.1 [Approved]
-makemeadmin 2.3 [Approved]
-MakeMKV 1.14.7 [Approved]
-malwarebytes 4.0.0.108 [Approved]
-manifest-tool 1.0.0 [Approved]
-mediainfo 19.09 [Approved]
-mediamonkey 4.1.26.1896 [Approved]
-mkvtoolnix 42.0.0 [Approved]
-monitorswitcher 0.7.0.0 [Approved]
-mumble 1.3.0 [Approved]
-netio-gui 1.0.4 [Approved]
-netscan 6.2.1.20161101 [Approved] - Possibly broken
-netscan.install 6.2.1 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
-netscan.portable 6.2.1 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
-netscan32 5.4.9.20160330 [Approved] - Possibly broken
-netscan64 5.4.9.20160330 [Approved] - Possibly broken
-netstat-agent 3.6 [Approved]
-netstat-agent.portable 3.6 [Approved]
-netstat-viewer 1.0.20180725 [Approved]
-netstress 2.0.9686 [Approved]
-netsurf 3.6 [Approved]
-nettime 3.14.20161102 [Approved]
-networkconnectlog 1.11 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
-networkinterfacesview 1.15 [Approved]
-networklatencyview 1.65 [Approved]
-NETworkManager 2019.12.0 [Approved]
-networkmonitor 3.4.0.20140224
-networkusageview 1.13 [Approved]
-networx 6.2.5 [Approved]
-nodejs 13.5.0 [Approved]
-nodejs.commandline 6.11.0 [Approved]
-nsudo 6.2.1812.31 [Approved]
-ntfsinfo 1.20 [Approved]
-ntfssecurity-psmodule 4.2.4 [Approved]
-nvidia-display-driver-disable-updates-winconfig 0.0.1 [Approved]
-nvidia-geforce-now 2.0.15.74 [Approved]
-obs 0.659 [Approved]
-obs-studio-wiiplayer2-scripts 0.4.6657.3109 [Approved]
-onedrive 17.3.6798.0207 [Approved]
-onedrivebully 1.2 [Approved]
-onescript 1.2.0 [Approved]
-openchrom 1.3.0 [Approved]
-opendns-updater 2.2.1.20170716 [Approved]
-openldap 2.4.39 - Possibly broken
-OpenShark 1.4
-openssh 8.0.0.1 [Approved]
-OpenSSL.Light 1.1.1.20181020 [Approved] - Possibly broken
-opensslkey 1.3.0.20130622 [Approved]
-open-visual-traceroute 1.7.1 [Approved]
-openvpn 2.4.7 [Approved]
-openvpn-community 2.3.6 [Approved]
-origin 10.5.59.36848 [Approved]
-orionsdk 2.5.0.214 [Approved]
-OuiGuiChocolatey 0.3 [Approved]
-packageinstaller 2.0.89 [Approved]
-password-control 2.4.3061.39299 [Approved]
-passwordfox 1.56 [Approved] - Possibly broken
-password-generator 3.0.0 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
-passwordresetwinapp 8.0.26.2
-passwordscan 1.42 [Approved] - Possibly broken
-passwordscan.portable 1.42 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
-PDFCombine 3.1
-PDFConverter 3.1
-pdfcreator 3.2.0
-PDFCreator 3.5.1 [Approved]
-pdffactorypro-workstation 7.11 [Approved]
-pdf-ifilter-64 11.0.01.20180614 [Approved]
-pdfill 11.0
-pdfsam 4.0.5 [Approved]
-pdfsam.install 4.0.5 [Approved]
-PDFSplitter 3.1
-Pencil 3.1.0 [Approved]
-PhantomJS 2.1.1 [Approved]
-php 7.4.1 [Approved]
-php-manager 2.4.0 [Approved]
+,advanced-bat-to-exe-converter,,none
+,advancedsystemtweaker,,none
+,advanced-ip-scanner,,none
+,angryip,,none
+,filezilla,,midco
+,icbusinessmanager,,midco
+,icoms,,midco
+,interactiondesktop,,midco
+,nim,,midco
+,office365,,midco
+,Office365ProPlus,,midco
+,Office365Visio,,midco
+,pdfcreator,,midco
+,webexmeetingsapp,,midco
+,webexprodtools,,midco
+,webexteams,,midco
+,wireshark,,midco
+,commandWindowHere 1.0.2 [Approved]
+,PowerShellHere 0.0.3 [Approved] - Possibly broken
+,powershellhere-elevated 1.0.0 [Approved]
+,search-by-image-chrome 1.5.2 [Approved]
+,searchwithmybrowser 1.1.2 [Approved]
+,advancedsystemtweaker 2.0.0.20141128 [Approved]
+,audioswitcher 1.8.0.142 [Approved]
+,makemeadmin 2.3 [Approved]
+,SetDefaultPrinter 1.0.1 [Approved]
+,SettingsManager 0.0.1
+,simplesystemtweaker 2.0.0.20141201 [Approved]
+,startmenureviver 2.5.0.18 [Approved]
+,ultimate-settings-panel 6.5 [Approved]
+,ultimate-settings-panel-lite 5.1 [Approved] - Possibly broken
+,Bat 0.12.1 [Approved]
+,awk 4.2.132 [Approved]
+,curl 7.68.0 [Approved]
+,dd 0.5 [Approved] - Possibly broken
+,grep 2.1032 [Approved]
+,grepwin 1.9.2 [Approved]
+,Less 5.51.0.20191024 [Approved]
+,lessmsi 1.6.91 [Approved]
+,advanced-ip-scanner 2.5.3850 [Approved]
+,angryip 3.6.2 [Approved]
+,dnsagent 1.6.5781.1 [Approved]
+,dns-benchmark 1.3.6668.20190425 [Approved]
+,dnscontrol-cli 2.9 [Approved]
+,dnsdataview 1.56 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
+,dnsjumper 2.1 [Approved]
+,dnsquerysniffer 1.80 [Approved]
+,gns3 2.2.5 [Approved]
+,gperf 3.1 [Approved]
+,inssider 3.1.2.13 [Approved]
+,lanbench 1.1.0.20180725 [Approved]
+,lanmonitor 10.32.8 [Approved]
+,lan-speed-test.portable 4.4.0 [Approved]
+,macaddressview 1.42 [Approved]
+,netio-gui 1.0.4 [Approved]
+,netscan.install 6.2.1 [Approved]
+,netscan32 5.4.9.20160330 [Approved] - Possibly broken
+,netscan64 5.4.9.20160330 [Approved] - Possibly broken
+,netstat-agent 3.6 [Approved]
+,netstat-agent.portable 3.6 [Approved]
+,netstat-viewer 1.0.20180725 [Approved]
+,netstress 2.0.9686 [Approved]
+,netsurf 3.6 [Approved]
+,nettime 3.14.20161102 [Approved]
+,networkconnectlog 1.11 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
+,networkinterfacesview 1.15 [Approved]
+,networklatencyview 1.65 [Approved]
+,NETworkManager 2019.12.0 [Approved]
+,networkmonitor 3.4.0.20140224
+,networkusageview 1.13 [Approved]
+,networx 6.2.5 [Approved]
+,open-visual-traceroute 1.7.1 [Approved]
+,pingplotter 5.15.1 [Approved]
+,tcp 1.0 [Approved]
+,tcp-cloud 2.10 [Approved]
+,tcp-csvview 0.9.5.1 [Approved]
+,tcp-diskdirextended 1.67 [Approved]
+,tcp-envvars 1.0 [Approved]
+,tcp-fileinfo 2.23 [Approved]
+,tcp-iclview 5.7.2019 [Approved]
+,tcping 0.39.20180614 [Approved]
+,tcpipmanager 4.1.1 [Approved]
+,tcpipmanager.install 4.1.1 [Approved]
+,tcpipmanager.portable 4.1.1 [Approved]
+,tcp-linkinfo 1.5.2 [Approved]
+,tcp-mediainfo 1.0.3 [Approved]
+,TCPOptimizer 3.0.8 [Approved]
+,tcp-peviewer 2.0 [Approved]
+,tcps 0.3 [Approved]
+,tcp-services2 0.8.1 [Approved]
+,tcp-shelldetails 1.26 [Approved]
+,tcp-startups 0.4.0 [Approved]
+,tcptrace 0.8.1.717 [Approved]
+,tcp-uninstaller 1.0.1.20191007 [Approved]
+,tcpvcon 3.05 [Approved]
+,tcp-virtualpanel 2.0.7.1372 [Approved]
+,tcp-webdav 3.0 [Approved]
+,git.install 2.25.0 [Approved]
+,Git-Credential-Manager-for-Windows 1.20.0 [Approved]
+,GitHub 3.2.0.20181119 [Approved]
+,githubforwindows 2.13.0.2 [Approved]
+,HTMLConverter 3.1
+,htmldocedit 1.02 [Approved]
+,html-help-workshop 1.32 [Approved]
+,HtmlPackager 0.1.6.5 [Approved]
+,html-tidy 5.6.0 [Approved]
+,HttpRest 3.0
+,httrack 3.49.2 [Approved]
+,httrack.app 3.49.2 [Approved]
+,initool 0.9.0 [Approved]
+,manifest-tool 1.0.0 [Approved]
+,php 7.4.1 [Approved]
+,php-manager 2.4.0 [Approved]
+,php-service 7.4.1 [Approved]
+,phpstorm 2019.3.1 [Approved]
+,python2 2.7.17 [Approved]
+,python3-x86_32 3.5.2.20170425 [Approved] - Possibly broken
+,python-x86_32 3.5.2.20170425 [Approved] - Possibly broken
+,quick-javascript-switcher-chrome 1.4.1.20170115 [Approved]
+,sslverifier 1.3.0.1 [Approved]
+,vscode.install 1.41.1 [Approved]
+,vscode-autohotkey 0.2.2 [Approved]
+,audacity-ffmpeg 2.2.2.20181007 [Approved]
+,audacity-lame 3.100.0.20190331 [Approved]
+,gimp 2.10.14 [Approved]
+,obs 0.659 [Approved]
+,screentogif 2.19.3 [Approved]
+,atnow 1.1 [Approved]
+,autohotkey.install 1.1.32.00 [Approved]
+,autoit 3.3.14.5 [Approved]
+,tftpd32 4.60 [Approved]
+,explorer-show-all-folders 1.0.0 [Approved]
+,explorer-winconfig 0.0.1 [Approved]
+,foobar2000 1.5.1 [Approved]
+,httping 2.5 [Approved]
+,io-unlocker 1.1.2.1 [Approved]
+,OpenShark 1.4
+,orionsdk 2.5.0.214 [Approved]
+,putty.install 0.73 [Approved]
+,scribus 1.4.8 [Approved]
+,seamonkey 2.49.5 [Approved]
+,sendmessage 1.1.2 [Approved]
+,shutdownguard 1.0.0.20160912 [Approved]
+,silentcmd 1.0.12.2019 [Approved]
+,startbluescreen 1.00 [Approved]
+,Sudo 1.1.2 [Approved]
+,TeraCopy 3.26.3.20190627 [Approved]
+,traffic-monitor 1.77 [Approved]
+,trafficwatcher 2.0.1 [Approved]
+,usblogon 1.8.1.2 [Approved]
+,android-sdk 26.1.1 [Approved]
+,atnow 1.1 [Approved]
+,audioswitcher 1.8.0.142 [Approved]
+,autoclicker 3.0 [Approved]
+,autohotkey.install 1.1.32.00 [Approved]
+,autohotkey.portable 1.1.32.00 [Approved]
+,autoit 3.3.14.5 [Approved]
+,autoit.commandline 3.3.14.2 [Approved]
+,autologon 3.10 [Approved]
+,AutoRuns 13.96 [Approved]
+,awk 4.2.132 [Approved]
+,awscli 1.17.3 [Approved]
+,axcrypt 2.1.1585.0 [Approved]
+,Bat 0.12.1 [Approved]
+,batch-docs 5.6.0 [Approved]
+,batch-encoding-converter 5.0.0 [Approved]
+,batch-file-encrypt 5.0.0 [Approved]
+,batch-file-manager 5.0.0 [Approved]
+,batch-files 5.0.0 [Approved]
+,batch-hex-editor 5.0.0 [Approved]
+,batch-image-converter 5.6.0 [Approved]
+,batch-image-enhancer 5.6.0 [Approved]
+,batch-image-resizer 5.6.0 [Approved]
+,batch-photo-face 5.6.0 [Approved]
+,batch-regex 5.0.0 [Approved]
+,batch-text-file-editor 5.0.0 [Approved]
+,batch-word-replace 5.6.0 [Approved]
+,belarcadvisor 8.5 [Approved]
+,bind-toolsonly 9.14.2 [Approved]
+,Bitnami-XAMPP 7.3.4 [Approved]
+,bluetoothview 1.66 [Approved]
+,bluetracker-cli 1.3.2 [Approved]
+,Blur-IE 5.5.1930 [Approved]
+,bonjour 2.0.2.0 [Approved]
+,browsinghistoryview 2.21 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
+,cameraraw 9.12.1 [Approved]
+,cameyo 3.1.1446 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
+,camstudio 2.7.316.20161004 [Approved]
+,camtasia 2019.0.8.1748400 [Approved]
+,camunda-bpm-tomcat 7.11.0 [Approved]
+,camunda-modeler 3.5.0 [Approved]
+,ccleaner 5.63.7540 [Approved]
+,ccleaner.portable 5.63.0.7540 [Approved]
+,change-dns-servers 1.0.0 [Approved]
+,choco-cleaner 0.0.7 [Approved]
+,chocolatey.server 0.2.5 [Approved]
+,chocolatey-core.extension 1.3.5.1 [Approved]
+,ChocolateyExplorer 0.2.2.111 [Approved] - Possibly broken
+,chocolatey-fastanswers.extension 0.0.2 [Approved]
+,ChocolateyGUI 0.16.0 [Approved]
+,chocolatey-nexus-repo 1.0.0 [Approved]
+,ChocolateyPackageUpdater 0.6.13.0 [Approved]
+,chocolateypowershell 0.0.2.1 [Approved]
+,chocolatey-toast.extension 1.0.1 [Approved]
+,chocolatey-vscode 0.7.1 [Approved]
+,chocolatey-vscode.extension 1.1.0 [Approved]
+,chocolatey-windowsupdate.extension 1.0.4 [Approved]
+,choco-optimize-at 0.0.1.1 [Approved]
+,choco-package-deprecater 2019.09.03 [Approved]
+,choco-persistent-packages 2018.05.06 [Approved]
+,choco-protocol-support 0.0.1 [Approved]
+,ChocoShortcuts 0.4.1 [Approved]
+,choco-upgrade-all-at 0.0.5 [Approved]
+,choco-upgrade-all-at-startup 2018.08.23 [Approved]
+,collectdwin 0.5.19 [Approved]
+,collectw.service 1.0.32.0 [Approved]
+,commandWindowHere 1.0.2 [Approved]
+,convertall 0.6.0 [Approved]
+,curl 7.68.0 [Approved]
+,Cygwin 3.1.2 [Approved]
+,dd 0.5 [Approved] - Possibly broken
+,ddecmd 1.6 [Approved]
+,ddev 1.12.1 [Approved]
+,deluge 1.3.15 [Approved]
+,disableuac 0.0.3 [Approved]
+,disable-windows10-upgrade 1.2.0 [Approved]
+,discord.install 0.0.305 [Approved]
+,discordchatexporter 2.11 [Approved]
+,disk2vhd 2.01.0.20160213 [Approved]
+,disksmartview 1.21 [Approved]
+,dllexp 1.66 [Approved]
+,dnsagent 1.6.5781.1 [Approved]
+,dns-benchmark 1.3.6668.20190425 [Approved]
+,dnscontrol-cli 2.9 [Approved]
+,dnscrypt-proxy 2.0.36 [Approved]
+,dnsdataview 1.56 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
+,dnsjumper 2.1 [Approved]
+,dnsquerysniffer 1.80 [Approved]
+,ekiga 4.0.1.01 [Approved]
+,enigmavirtualbox 9.20 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
+,exifdataview 1.06 [Approved]
+,exiftool 11.84 [Approved]
+,explorer-show-all-folders 1.0.0 [Approved]
+,explorer-winconfig 0.0.1 [Approved]
+,expressionweb 4.0.1460.0 [Approved]
+,ext2explore 2.2.71.20100623 [Approved]
+,ext2fsd 0.69.0.20171118 [Approved]
+,fastresolver.install 1.26 [Approved]
+,faviconizer 1.4 [Approved]
+,FileFormatConverters 1.0.1 - Possibly broken
+,filezilla 3.46.3 [Approved]
+,findandreplace 2.0 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
+,find-and-run-robot.install 2.234.01 [Approved]
+,find-and-run-robot.portable 2.234.01 [Approved]
+,foobar2000 1.5.1 [Approved]
+,force-cli 0.26.9 [Approved]
+,FoxitReader 9.7.0.29455 [Approved]
+,fraps 3.5.99.20150108 [Approved] - Possibly broken
+,genuinetools 0.0.1 [Approved]
+,getignore 1.0.0.20170723 [Approved]
+,gifcam 6.0.0.0 [Approved]
+,gimp 2.10.14 [Approved]
+,git.commandline 2.11.0.20170203 [Approved]
+,git.install 2.25.0 [Approved]
+,git.portable 2.25.0 [Approved]
+,gitahead 2.6.1 [Approved]
+,git-annex 7.20190627 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
+,gitblit 1.6.2 [Approved]
+,git-cola 3.6 [Approved]
+,Git-Credential-Manager-for-Windows 1.20.0 [Approved]
+,git-credential-winstore 2.0.0.20151206 [Approved]
+,GitDepend.Portable 0.5.0 [Approved]
+,git-disable-gcm 1.0.0 [Approved]
+,gitea 1.10.2 [Approved]
+,gitextensions 3.3.1 [Approved]
+,gitextensions.portable 3.3.1 [Approved]
+,giteye 1.5.0
+,gitflow-avh 0.0.0 [Approved]
+,git-flow-dependencies 0.2 - Possibly broken
+,git-flow-hooks 1.0.4 [Approved]
+,git-fork 1.43.3 [Approved]
+,gitg 3.32.1 [Approved]
+,gitg.install 3.32.1 [Approved]
+,git-helper 1.5 - Possibly broken
+,GitHub 3.2.0.20181119 [Approved]
+,github-build-from-label 1.1 - Possibly broken
+,githubforwindows 2.13.0.2 [Approved]
+,githublink 2.3.0 [Approved]
+,githubreleasenotes 1.0.5.2 [Approved]
+,githubsearch 1.2.2 [Approved]
+,git-it 4.4.0 [Approved]
+,gitkraken 6.4.1 [Approved]
+,gitlab-runner 12.6.0 [Approved]
+,git-lfs 2.9.2 [Approved]
+,git-lfs.install 2.9.2 [Approved]
+,gitlink 3.0.0 [Approved]
+,gitpad 1.2 [Approved]
+,git-phlow 3.8.20 [Approved]
+,git-sizer 1.3.0 [Approved]
+,GitSvnExternals 1.1.0.7
+,Git-TF 2.0.3.20131219 [Approved]
+,GitVersion 1.0.0.1
+,GitVersion.Portable 5.1.3 [Approved]
+,GitVersioner 1.0.1.14 [Approved]
+,gitviz 0.8 [Approved]
+,glaryutilities-free 5.80 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
+,glyphr-studio-desktop 0.5.4 [Approved]
+,gns3 2.2.5 [Approved]
+,gnucash 3.8 [Approved]
+,GnuWin 0.6.3.1 - Possibly broken
+,gnuwin32-coreutils.install 5.3.0 [Approved]
+,gnuwin32-coreutils.portable 5.3.0 [Approved]
+,gperf 3.1 [Approved]
+,grammarly 1.5.58.0 [Approved]
+,graph 4.4.2.20170413 [Approved]
+,grep 2.1032 [Approved]
+,grepwin 1.9.2 [Approved]
+,grub2win 1.0.5.8 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
+,grubinst 1.0.1 [Approved]
+,gsudo 0.5 [Approved]
+,gsuite-migration-exchange 5.1.20.0 [Approved]
+,gsuite-migration-outlook 4.0.117.10 [Approved]
+,gsuite-sync-outlook 4.1.25.0 [Approved]
+,gtools 4.2 [Approved]
+,gzip 1.3.12 [Approved]
+,h264tscutter 1.1.1.20161125 [Approved]
+,handyimagemapper 2.0.0.0 [Approved]
+,hardentools 1.0 [Approved]
+,hardware-freak 2.0.20161030 [Approved]
+,Hardwipe 5.1.3 [Approved]
+,hddguardian 0.6.2 [Approved] - Possibly broken
+,hddguardian.install 0.6.2 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
+,hddguardian.portable 0.6.2 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
+,hdguard 10.0.0.4 [Approved]
+,hdhomerun-view 2019.06.21 [Approved]
+,hdparm 6.9.2 [Approved]
+,hdrmerge 0.5.0 [Approved]
+,hdtune 2.55.0.1 [Approved]
+,heaven-benchmark 4.0 [Approved]
+,hfsexplorer 0.23.1 [Approved]
+,hijackthis 2.9.0.1 [Approved]
+,hot-chocolatey 7.0.1.0 [Approved]
+,hp-bios-cmdlets 1.1.0.101 [Approved]
+,hp-coolsense-technology 2.10.51 [Approved]
+,hpglviewer 5.43.0.20180521 [Approved]
+,hp-ilo-cmdlets 1.4.0.1 [Approved]
+,hp-oa-cmdlets 1.1.0.701 [Approved]
+,hp-universal-print-driver-pcl 6.8.0.24296 [Approved]
+,hsm-usb-serial-driver 3.5.9 [Approved]
+,HTMLConverter 3.1
+,htmldocedit 1.02 [Approved]
+,html-help-workshop 1.32 [Approved]
+,HtmlPackager 0.1.6.5 [Approved]
+,html-tidy 5.6.0 [Approved]
+,httping 2.5 [Approved]
+,HttpRest 3.0
+,httpsysmanager 1.5 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
+,httrack 3.49.2 [Approved]
+,httrack.app 3.49.2 [Approved]
+,hulu.desktop 0.9.14.2 - Possibly broken
+,hwinfo.install 6.20 [Approved]
+,hwinfo.portable 6.20 [Approved]
+,hwmonitor 1.41.0.20191013 [Approved]
+,icecast 2.4.4 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
+,ietab2-firefox 6.2.18.120161009 [Approved] - Possibly broken
+,iis.administration 2.2.0 [Approved]
+,iis75.express 7.5.1
+,iis-application-initialization 1.1 [Approved]
+,iis-arr 3.0.20180207 [Approved]
+,iis-cors-module 1.0 [Approved]
+,iisexpress 10.0.0.20181007 [Approved]
+,iis-externalcache 1.1.20151123 [Approved] - Possibly broken
+,iisgeolocate 1.4.0.1 [Approved]
+,iishosts 1.0.1 [Approved]
+,iis-media-services 4.1.20160504 [Approved] - Possibly broken
+,iissecurity-psmodule 1.3.0 [Approved]
+,imageanalyzer 1.38.4 [Approved]
+,imagemagick.tool 7.0.9.16 [Approved]
+,imgburn 2.5.8.20170708 [Approved]
+,initool 0.9.0 [Approved]
+,innoextract 1.8 [Approved]
+,InnoSetup 6.0.3 [Approved]
+,inssider 3.1.2.13 [Approved]
+,io-unlocker 1.1.2.1 [Approved]
+,iperf3 3.1.3 [Approved]
+,irfanviewplugins 4.54 [Approved]
+,irfanview-shellextension 1.06 [Approved]
+,ispy 6.5.0.0 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
+,keyfinder 2.0.10.13 [Approved]
+,kitty 0.73.1.5 [Approved]
+,kitty.portable 0.67.0.0 [Approved]
+,lame 3.100.20190612 [Approved]
+,lame-front-end 1.8.1 [Approved]
+,lamexp 4.18 [Approved]
+,lanbench 1.1.0.20180725 [Approved]
+,lanconfig 10.32.18 [Approved]
+,lanmessenger 1.2.35 [Approved]
+,lanmonitor 10.32.8 [Approved]
+,lan-speed-test.portable 4.4.0 [Approved]
+,leagueoflegends 1.0.0.20171207 [Approved]
+,leagueoflegendseuw 1.0.0.0 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
+,leanify 0.4.2 [Approved]
+,Less 5.51.0.20191024 [Approved]
+,lessmsi 1.6.91 [Approved]
+,line 5.20.2.2045 [Approved]
+,logitechcamerasettings 2.10.4.0
+,logitechgaming 9.02.65 [Approved]
+,logitech-media-server 7.9.1 [Approved]
+,logitech-options 7.14.70 [Approved]
+,logitech-presentation 1.52.24 [Approved]
+,logitech-webcam-software 2.80.853.0 [Approved]
+,Lua 5.1.5.52 [Approved]
+,lua53 5.3.5 [Approved]
+,luabuglight 2.3.20161105 [Approved]
+,luarocks 2.4.4 [Approved]
+,macaddressview 1.42 [Approved]
+,make 4.2.1 [Approved]
+,makemeadmin 2.3 [Approved]
+,MakeMKV 1.14.7 [Approved]
+,malwarebytes 4.0.0.108 [Approved]
+,manifest-tool 1.0.0 [Approved]
+,mediainfo 19.09 [Approved]
+,mediamonkey 4.1.26.1896 [Approved]
+,mkvtoolnix 42.0.0 [Approved]
+,monitorswitcher 0.7.0.0 [Approved]
+,mumble 1.3.0 [Approved]
+,netio-gui 1.0.4 [Approved]
+,netscan 6.2.1.20161101 [Approved] - Possibly broken
+,netscan.install 6.2.1 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
+,netscan.portable 6.2.1 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
+,netscan32 5.4.9.20160330 [Approved] - Possibly broken
+,netscan64 5.4.9.20160330 [Approved] - Possibly broken
+,netstat-agent 3.6 [Approved]
+,netstat-agent.portable 3.6 [Approved]
+,netstat-viewer 1.0.20180725 [Approved]
+,netstress 2.0.9686 [Approved]
+,netsurf 3.6 [Approved]
+,nettime 3.14.20161102 [Approved]
+,networkconnectlog 1.11 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
+,networkinterfacesview 1.15 [Approved]
+,networklatencyview 1.65 [Approved]
+,NETworkManager 2019.12.0 [Approved]
+,networkmonitor 3.4.0.20140224
+,networkusageview 1.13 [Approved]
+,networx 6.2.5 [Approved]
+,nodejs 13.5.0 [Approved]
+,nodejs.commandline 6.11.0 [Approved]
+,nsudo 6.2.1812.31 [Approved]
+,ntfsinfo 1.20 [Approved]
+,ntfssecurity-psmodule 4.2.4 [Approved]
+,nvidia-display-driver-disable-updates-winconfig 0.0.1 [Approved]
+,nvidia-geforce-now 2.0.15.74 [Approved]
+,obs 0.659 [Approved]
+,obs-studio-wiiplayer2-scripts 0.4.6657.3109 [Approved]
+,onedrive 17.3.6798.0207 [Approved]
+,onedrivebully 1.2 [Approved]
+,onescript 1.2.0 [Approved]
+,openchrom 1.3.0 [Approved]
+,opendns-updater 2.2.1.20170716 [Approved]
+,openldap 2.4.39 - Possibly broken
+,OpenShark 1.4
+,openssh 8.0.0.1 [Approved]
+,OpenSSL.Light 1.1.1.20181020 [Approved] - Possibly broken
+,opensslkey 1.3.0.20130622 [Approved]
+,open-visual-traceroute 1.7.1 [Approved]
+,openvpn 2.4.7 [Approved]
+,openvpn-community 2.3.6 [Approved]
+,origin 10.5.59.36848 [Approved]
+,orionsdk 2.5.0.214 [Approved]
+,OuiGuiChocolatey 0.3 [Approved]
+,packageinstaller 2.0.89 [Approved]
+,password-control 2.4.3061.39299 [Approved]
+,passwordfox 1.56 [Approved] - Possibly broken
+,password-generator 3.0.0 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
+,passwordresetwinapp 8.0.26.2
+,passwordscan 1.42 [Approved] - Possibly broken
+,passwordscan.portable 1.42 [Approved] - Possibly broken for FOSS users (due to original download location changes by vendor)
+,PDFCombine 3.1
+,PDFConverter 3.1
+,pdfcreator 3.2.0
+,PDFCreator 3.5.1 [Approved]
+,pdffactorypro-workstation 7.11 [Approved]
+,pdf-ifilter-64 11.0.01.20180614 [Approved]
+,pdfill 11.0
+,pdfsam 4.0.5 [Approved]
+,pdfsam.install 4.0.5 [Approved]
+,PDFSplitter 3.1
+,Pencil 3.1.0 [Approved]
+,PhantomJS 2.1.1 [Approved]
+,php 7.4.1 [Approved]
+,php-manager 2.4.0 [Approved]
 php-service 7.4.1 [Approved]
 phpstorm 2019.3.1 [Approved]
 pingplotter 5.15.1 [Approved]
