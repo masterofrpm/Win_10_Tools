@@ -2,7 +2,7 @@
 .NAME
     ScriptStarter
 .SYNOPSIS
-    Lists available scripts at https://github.com/masterofrpm/Win_10_Tools/
+    Lists available scripts at https://github.com/masterofrpm/
 #>
 
 $MyProfile = 'https://raw.githubusercontent.com/masterofrpm/'
@@ -93,15 +93,22 @@ function get-selectedScript {
 		}
     $Script_Url = $MyProfile + $CSV_Selected.Location + '/master/' + $CSV_Selected.NameWithExtension
 	$Script_Path = $Path_Base + $CSV_Selected.NameWithExtension
-    return $Script_Url, $Script_Path, $CSV_Selected.LaunchType
+	$IncludeOne = $MyProfile + $CSV_Selected.Location + '/master/' + $CSV_Selected.IncludeOne
+	$IncludeOnePath = $Path_Base + $CSV_Selected.IncludeOne
+    return $Script_Url, $Script_Path, $CSV_Selected.LaunchType, $IncludeOne, $IncludeOnePath
 }
 
 function LaunchScript {
-    $Script_Url, $Script_Path, $Launch_Type = get-selectedScript
-	Write-Host $Script_Url, $Script_Path
+    $Script_Url, $Script_Path, $Launch_Type, $IncludeOne, $IncludeOnePath = get-selectedScript
+	Write-Host $Script_Url, $Script_Path, $IncludeOne
 	#Execute selected script
 	#(New-Object System.Net.WebClient).DownloadFile($Script_Url, $Script_Path)
 	Invoke-WebRequest -Headers $header -Uri $Script_Url -Outfile $Script_Path
+	If($IncludeOne -notmatch 'none'){
+		Write-Host 'downloading prerequesite'
+		Write-Host $IncludeOne
+		Invoke-WebRequest -Headers $header -Uri $IncludeOne -Outfile $IncludeOnePath
+		}
 	If($Launch_Type -eq "execute"){
 		Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$Script_Path`" $UpArg" -Verb RunAs
 	} ElseIf ($Launch_Type -eq "text"){
