@@ -8,7 +8,7 @@
 $MyProfile = 'https://raw.githubusercontent.com/masterofrpm/'
 $SetupSite = $MyProfile+'Win_10_Setup'
 $Setup_Base = $SetupSite+'/master/'
-$Path_Base = $PSScriptRoot + '\'
+$Path_Base = $ENV:Temp + '\'
 $List_Url = $Setup_Base + 'Version/AvailableScripts.csv'
 $header = @{ Authorization = 'Basic {0}' -f [Environment]::GetEnvironmentVariable('masterofrpmtoken', 'User') }
 
@@ -102,7 +102,6 @@ function LaunchScript {
     $Script_Url, $Script_Path, $Launch_Type, $IncludeOne, $IncludeOnePath = get-selectedScript
 	Write-Host $Script_Url, $Script_Path, $IncludeOne
 	#Execute selected script
-	#(New-Object System.Net.WebClient).DownloadFile($Script_Url, $Script_Path)
 	Invoke-WebRequest -Headers $header -Uri $Script_Url -Outfile $Script_Path
 	If($IncludeOne -notmatch 'none'){
 		Write-Host 'downloading prerequesite'
