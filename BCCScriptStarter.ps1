@@ -27,7 +27,7 @@ Add-Type -AssemblyName System.Windows.Forms
 
 $Form                            = New-Object system.Windows.Forms.Form
 $Form.ClientSize                 = '416,638'
-$Form.text                       = "Script Starter Modded by Paul Meyers"
+$Form.text                       = "Script Starter"
 $Form.TopMost                    = $false
 
 $ScriptList                      = New-Object system.Windows.Forms.ListBox
@@ -38,7 +38,7 @@ $ScriptList.Anchor               = 'top,right,bottom,left'
 $ScriptList.location             = New-Object System.Drawing.Point(44,146)
 
 $Label1                          = New-Object system.Windows.Forms.Label
-$Label1.text                     = "Script  Starter  Modded  by  Paul  Meyers"
+$Label1.text                     = "Script  Starter"
 $Label1.AutoSize                 = $true
 $Label1.width                    = 25
 $Label1.height                   = 10
@@ -53,7 +53,7 @@ $Panel1.BackColor                = "#4d8fde"
 $Panel1.location                 = New-Object System.Drawing.Point(0,0)
 
 $Label2                          = New-Object system.Windows.Forms.Label
-$Label2.text                     = "List of scripts in current directory:"
+$Label2.text                     = "List of scripts in configured locations:"
 $Label2.AutoSize                 = $true
 $Label2.width                    = 25
 $Label2.height                   = 10
